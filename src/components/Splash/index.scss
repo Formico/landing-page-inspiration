@@ -1,0 +1,15 @@
+@import '../../common/colors.scss';
+@import '../../common/fonts.scss';
+
+.splash {
+	background: $eggplant;
+	height: 600px;
+	
+	h1 {
+		color: $white;
+	}
+
+	.button-cta {
+		background: $logo-green;
+	}
+}
