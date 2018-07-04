@@ -1,0 +1,11 @@
+@import '../../common/animations.scss';
+
+.flashy-text {
+	display: flex;
+	flex-direction: row;
+
+	.flashy-chr {
+		@include transform(perspective(100px) rotateY(360deg));
+		transition-duration: 1s;
+	}
+}
