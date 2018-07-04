@@ -1,0 +1,27 @@
+@import '../../common/breakpoints.scss';
+@import '../../common/colors.scss';
+@import '../../common/fonts.scss';
+
+.button-cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $logo-green;
+	font-family: $font-body;
+	text-decoration: none;
+	color: $eggplant;
+
+	font-size: 16px;
+	height: 48px;
+	padding: 0 32px;
+
+	@include breakpoint(xxs) {
+		font-size: $font-size-h2;
+		height: 72px;
+	}
+
+	&:hover {
+		background: $white;
+		color: $logo-green;
+	}
+}

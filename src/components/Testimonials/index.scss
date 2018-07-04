@@ -3,15 +3,12 @@
 @import '../../common/colors.scss';
 @import '../../common/fonts.scss';
 
-.splash {
-	background: $eggplant;
+.testimonials {
+	background: $white;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	// Slanted edge
-  @include clip-path(polygon(0 0, 100% 0, 100% 100%, 0 95%));
-	
 	// Mobile Responsiveness
 	height: 360px;
 
@@ -24,7 +21,7 @@
 	}
 
 	h1 {
-		color: $white;
+		color: $eggplant;
 		font-weight: normal;
 		display: flex;
 		flex-direction: row;
@@ -32,7 +29,7 @@
 		font-size: 48px;
 
 		@include breakpoint(xxs) {
-			font-size: $font-size-display;
+			font-size: $font-size-h1;
 		}
 	}
 	
@@ -43,7 +40,7 @@
 			display: block;
 		}
 
-		margin-top: 192px;
+		margin-top: 72px;
 	}
 
 	h1.mobile {
@@ -55,13 +52,5 @@
 
 		margin-left: 24px;
 		margin-top: 48px;
-	}
-
-	.button-cta {
-		margin-top: 32px;
-
-		@include breakpoint(xxs) {
-			margin-top: 48px;
-		}
 	}
 }
