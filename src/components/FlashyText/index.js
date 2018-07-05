@@ -13,6 +13,15 @@ export default class FlashyText extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
+  componentDidMount() {
+    const { hoverStates } = this.state;
+
+    setTimeout(() => {
+      Object.keys(hoverStates).forEach(id => this.onChange(id));
+      Object.keys(hoverStates).forEach(id => this.onChange(id));
+    }, 100);
+  }
+
   onChange(id) {
     const { hoverStates } = this.state;
 
@@ -32,6 +41,7 @@ export default class FlashyText extends Component {
           { hoverStates } = this.state;
 
     const letters = text.split('').map((chr, idx) => {
+      if (hoverStates[idx] === undefined) hoverStates[idx] = false;
       if (chr !== ' ') {
         return <span key={ idx }
                 className={ hoverStates[idx] ? "flashy-chr" : "" }

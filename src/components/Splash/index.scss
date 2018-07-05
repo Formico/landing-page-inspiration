@@ -2,6 +2,7 @@
 @import '../../common/breakpoints.scss';
 @import '../../common/colors.scss';
 @import '../../common/fonts.scss';
+@import '../../common/shapes.scss';
 
 .splash {
 	background: $eggplant;
@@ -10,7 +11,7 @@
 	align-items: center;
 
 	// Slanted edge
-  @include clip-path(polygon(0 0, 100% 0, 100% 100%, 0 95%));
+  @include clip-path(polygon(0 0, 100% 0, 100% 100%, 0 100% - $slope));
 	
 	// Mobile Responsiveness
 	height: 360px;

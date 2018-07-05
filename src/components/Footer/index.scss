@@ -1,0 +1,18 @@
+@import '../../common/colors.scss';
+@import '../../common/fonts.scss';
+
+.footer {
+	display: flex;
+	flex-align: column;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	background: $eggplant;
+	color: $white;
+	font-family: $font-body;
+	font-size: $font-size-p;
+	p {
+		margin: 0;
+	}
+}
+

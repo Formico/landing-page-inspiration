@@ -1,0 +1,20 @@
+@import '../../../common/animations.scss';
+@import '../../../common/breakpoints.scss';
+@import '../../../common/colors.scss';
+@import '../../../common/fonts.scss';
+
+.step {
+	h2.header {
+		background: none;
+		color: $eggplant;
+		font-size: $font-size-h3;
+		font-family: $font-logo;
+		margin-bottom: 0;
+	}
+	p.description {
+		color: $eggplant;
+		font-size: $font-size-p;
+		font-family: $font-body;
+		margin-bottom: 0;
+	}
+}
