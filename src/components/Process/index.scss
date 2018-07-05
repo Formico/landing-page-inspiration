@@ -9,16 +9,7 @@
 	flex-direction: column;
 	align-items: center;
 
-	// Mobile Responsiveness
-	height: 360px;
-
-	@include breakpoint(xxs) {
-		height: 480px;
-	}
-
-	@include breakpoint(sm) {
-		height: 600px;
-	}
+	height: 100%;
 
 	h1 {
 		color: $eggplant;
@@ -56,6 +47,21 @@
 
 	.steps {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+		margin-bottom: 96px;
+
+		@include breakpoint(sm) {
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100%;
+			margin: 72px 24px 96px 24px;
+		}
+
+		.step {
+			margin-top: 60px;
+			@include breakpoint(sm) {
+				margin: 0;
+			}
+		}
 	}
 }

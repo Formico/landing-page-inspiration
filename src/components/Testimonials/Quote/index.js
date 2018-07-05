@@ -5,8 +5,8 @@ import routes from '../../../constants/routes'
 
 import './index.scss'
 
-const Step = ({ icon, header, description }) => (
-  <div className="step">
+const Quote = ({ icon, header, description }) => (
+  <div className="quote">
     <ReactSVG
       path={ `${routes.ICON}/${icon}` }
       className="icon"/>
@@ -15,4 +15,4 @@ const Step = ({ icon, header, description }) => (
   </div>
 )
 
-export default Step
+export default Quote

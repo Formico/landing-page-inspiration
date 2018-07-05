@@ -1,1 +1,1 @@
-exports.ICON = '/icon';
+exports.ICON = '/static/icon';

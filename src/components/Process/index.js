@@ -8,19 +8,23 @@ import './index.scss'
 
 const steps = [
   {
+    icon: "twitter.svg",
     header: "1. Free Consultation",
     description: "We talk and talk and talk"
   },
   {
+    icon: "twitter.svg",
     header: "2. Team Assembled",
     description: "Here's Johnnyy!"
   },
   {
+    icon: "twitter.svg",
     header: "3. Get to Work",
     description: "We work and work and work"
   }
 ].map((step, idx) => (
-  <Step header={ step.header }
+  <Step icon={ step.icon }
+    header={ step.header }
     description={ step.description } />
 ));
 
