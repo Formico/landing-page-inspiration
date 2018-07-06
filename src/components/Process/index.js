@@ -8,19 +8,19 @@ import './index.scss'
 
 const steps = [
   {
-    icon: "twitter.svg",
+    icon: "speech.svg",
     header: "1. Free Consultation",
-    description: "We talk and talk and talk"
+    description: "Every project starts with a detailed conversation to discover your needs."
   },
   {
-    icon: "twitter.svg",
+    icon: "world.svg",
     header: "2. Team Assembled",
-    description: "Here's Johnnyy!"
+    description: "We tap our exlusive network of top engineers, product managers, and designers to build your dream team."
   },
   {
-    icon: "twitter.svg",
+    icon: "package.svg",
     header: "3. Get to Work",
-    description: "We work and work and work"
+    description: "You'll have direct access to your team while we work."
   }
 ].map((step, idx) => (
   <Step icon={ step.icon }

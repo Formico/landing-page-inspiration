@@ -10,8 +10,10 @@ const Step = ({ icon, header, description }) => (
     <ReactSVG
       path={ `${routes.ICON}/${icon}` }
       className="icon"/>
-    <h2 className="header">{ `${header}` }</h2>
-    <p className="description">{ `${description}` }</p>
+    <div className="text">
+      <h2 className="header">{ `${header}` }</h2>
+      <p className="description">{ `${description}` }</p>
+    </div>
   </div>
 )
 

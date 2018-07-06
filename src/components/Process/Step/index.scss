@@ -4,22 +4,35 @@
 @import '../../../common/fonts.scss';
 
 .step {
+	width: 360px;
+	text-align: center;
 	.icon {
-		width: 120px;
+		width: 100%;
 		margin: auto;
 		fill: $logo-green;
+		text-align: center;
+		svg {
+			width: 96px;
+			height: 96px;
+		}
 	}
-	h2.header {
-		background: none;
-		color: $eggplant;
-		font-size: $font-size-h3;
-		font-family: $font-logo;
-		margin-bottom: 0;
-	}
-	p.description {
-		color: $eggplant;
-		font-size: $font-size-p;
-		font-family: $font-body;
-		margin-bottom: 0;
+	.text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h2.header {
+			background: none;
+			color: $eggplant;
+			font-size: $font-size-p;
+			font-family: $font-logo;
+			margin-bottom: 0;
+		}
+		p.description {
+			color: $eggplant;
+			font-size: $font-size-p;
+			font-family: $font-body;
+			line-height: $line-height;
+			margin-bottom: 0;
+		}
 	}
 }

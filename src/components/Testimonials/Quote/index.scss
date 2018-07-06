@@ -4,22 +4,31 @@
 @import '../../../common/fonts.scss';
 
 .quote {
-	.icon {
-		width: 120px;
-		margin: auto;
-		fill: $logo-green;
-	}
-	h2.header {
-		background: none;
-		color: $eggplant;
-		font-size: $font-size-h3;
-		font-family: $font-logo;
-		margin-bottom: 0;
-	}
-	p.description {
-		color: $eggplant;
-		font-size: $font-size-p;
+	width: 360px;
+	padding: 0 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	p.text {
+		margin: 0;
 		font-family: $font-body;
-		margin-bottom: 0;
+		font-size: $font-size-p;
+		line-height: $line-height;
+	}
+	.info {
+		line-height: $line-height;
+		text-align: right;
+		margin-top: 12px;
+		.personal-info {
+			.name {
+				margin: 0;
+				font-family: $font-logo;
+			}
+			p {
+				margin: 0;
+				font-family: $font-body;
+				font-size: $font-size-p;
+			}
+		}
 	}
 }

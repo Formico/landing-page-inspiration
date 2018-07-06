@@ -1,17 +1,19 @@
 import React from 'react'
-import ReactSVG from 'react-svg'
 
 import routes from '../../../constants/routes'
 
 import './index.scss'
 
-const Quote = ({ icon, header, description }) => (
+const Quote = ({ text, image, person, title, company }) => (
   <div className="quote">
-    <ReactSVG
-      path={ `${routes.ICON}/${icon}` }
-      className="icon"/>
-    <h2 className="header">{ `${header}` }</h2>
-    <p className="description">{ `${description}` }</p>
+    <p className="text">{ text }</p>
+    <div className="info">
+      <div className="image" />
+      <div className="personal-info">
+        <h3 className="name">{ person }</h3> 
+        <p>{ title }, <strong>{ company }</strong></p>
+      </div>
+    </div>
   </div>
 )
 

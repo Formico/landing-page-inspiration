@@ -8,7 +8,7 @@ import './index.scss'
 
 const quotes = [
   {
-    text: "They did a really good job. Just the best really. Highly Reccomend. Yada yda yda.",
+    text: "They did a really good job. Just the best really. Highly Reccomend. Yada yda yda. They did a really good job. Just the best really. Highly Reccomend.",
     image: "",
     person: "Tony Baloney",
     title: "CTO",
@@ -20,6 +20,13 @@ const quotes = [
     person: "Sarah Sogood",
     title: "CEO",
     company: "Amazon",
+  },
+  {
+    text: "Wow. Can't believe how amazing and yada yada they were so good",
+    image: "",
+    person: "Kyle McDogal",
+    title: "VP Engineering",
+    company: "Apple",
   }
 ].map((quote, idx) => (
   <Quote
