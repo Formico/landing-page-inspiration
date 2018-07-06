@@ -23,7 +23,8 @@ const steps = [
     description: "You'll have direct access to your team while we work."
   }
 ].map((step, idx) => (
-  <Step icon={ step.icon }
+  <Step key={ idx }
+    icon={ step.icon }
     header={ step.header }
     description={ step.description } />
 ));

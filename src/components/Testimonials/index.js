@@ -29,7 +29,7 @@ const quotes = [
     company: "Apple",
   }
 ].map((quote, idx) => (
-  <Quote
+  <Quote key={ idx }
     text={ quote.text }
     image={ quote.image }
     person={ quote.person }

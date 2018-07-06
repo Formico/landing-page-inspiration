@@ -1,3 +1,4 @@
+@import '../../common/breakpoints.scss';
 @import '../../common/colors.scss';
 @import '../../common/fonts.scss';
 
@@ -11,13 +12,25 @@
 	.temp-logo {
 		height: 24px;
 		width: 24px;
-		margin-left: 24px;
+		margin-left: 12px;
 		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include breakpoint(xxs) {
+			margin-left: 24px;
+		}
+
 		div {
 			position: absolute;
 			background: $logo-green;		
-			height: 24px;
-			width: 24px;
+			height: 12px;
+			width: 12px;
+			@include breakpoint(xxs) {
+				height: 24px;
+				width: 24px;
+			}
 		}	
 		.blockB {
 			transform: rotate(45deg);
@@ -31,12 +44,16 @@
 		margin-bottom: 0;
 
 		a {
-			margin: 0 0 0 12px;
+			margin: 0 0 0 6px;
 			color: $white;
 			font-family: $font-logo;
 			font-weight: normal;
-			font-size: $font-size-h1;
 			text-decoration: none;
+			font-size: $font-size-p;
+			@include breakpoint(xxs) {
+				font-size: $font-size-h1;
+				margin-left: 12px;
+			}
 		}
 	}
 }
