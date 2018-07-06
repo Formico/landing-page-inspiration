@@ -53,8 +53,12 @@
 		@include breakpoint(sm) {
 			flex-direction: row;
 			justify-content: space-around;
-			width: 100%;
+			width: 95%;
 			margin: 72px 24px 96px 24px;
+		}
+
+		@include breakpoint(md) {
+			width: 85%;
 		}
 
 		.quote {

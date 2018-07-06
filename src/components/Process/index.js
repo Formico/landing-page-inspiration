@@ -15,12 +15,12 @@ const steps = [
   {
     icon: "world.svg",
     header: "2. Team Assembled",
-    description: "We tap our exlusive network of top engineers, product managers, and designers to build your dream team."
+    description: "We tap our network of top engineers, product managers, and designers to build your dream team."
   },
   {
     icon: "package.svg",
     header: "3. Get to Work",
-    description: "You'll have direct access to your team while we work."
+    description: "We'll set up a private slack channel for you and your new Formico team."
   }
 ].map((step, idx) => (
   <Step key={ idx }
