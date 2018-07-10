@@ -7,11 +7,11 @@ import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 
-const IndexPage = () => (
+const IndexPage = ({ ctaUrl }) => (
   <div>
-    <Splash />
+    <Splash ctaUrl={ ctaUrl }/>
     <Process />
-    <Contact />
+    <Contact ctaUrl={ ctaUrl }/>
     <Testimonials />
     <Footer />
   </div>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Formico',
+    title:  'Formico'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
