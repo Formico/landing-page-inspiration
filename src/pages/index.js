@@ -12,7 +12,6 @@ const IndexPage = ({ ctaUrl }) => (
     <Splash ctaUrl={ ctaUrl }/>
     <Process />
     <Contact ctaUrl={ ctaUrl }/>
-    <Testimonials />
     <Footer />
   </div>
 )

@@ -11,7 +11,8 @@
 	justify-content: center;
 
 	// Slanted edge
-  @include clip-path(polygon(0 0, 100% $slope, 100% 100%, 0 100% - $slope));
+  // @include clip-path(polygon(0 0, 100% $slope, 100% 100%, 0 100% - $slope));
+  @include clip-path(polygon(0 0, 100% $slope, 100% 100%, 0 100%));
 	
 	// Mobile Responsiveness
 	height: 240px;

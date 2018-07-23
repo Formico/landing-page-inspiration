@@ -5,13 +5,12 @@ import './index.scss'
 
 const Header = ({ siteTitle }) => (
   <div className="header">
-    <div className="temp-logo">
-      <div className="blockA" />
-      <div className="blockB" />
-    </div>
-    <h1>
-      <Link to="/">{ siteTitle }</Link>
-    </h1>
+    <Link to="/">
+      <div className="logo-container">
+        <img className="logo" src="/static/formico-logo.png" />
+        <img className="wordmark" src="/static/formico-wordmark.png" />
+      </div>
+    </Link>
   </div>
 )
 

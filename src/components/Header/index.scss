@@ -9,51 +9,19 @@
 	align-items: center;
 	height: 60px;
 
-	.temp-logo {
-		height: 24px;
-		width: 24px;
-		margin-left: 12px;
-		position: relative;
+	.logo-container {
+		margin: 32px auto 12px 12px;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex-direction: row;
+		align-content: center;
 
-		@include breakpoint(xxs) {
-			margin-left: 24px;
+		.logo {
+			height: 32px;
+			width: 32px;
 		}
 
-		div {
-			position: absolute;
-			background: $logo-green;		
-			height: 12px;
-			width: 12px;
-			@include breakpoint(xxs) {
-				height: 24px;
-				width: 24px;
-			}
-		}	
-		.blockB {
-			transform: rotate(45deg);
-		}
-	}
-
-	h1 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 0;
-
-		a {
-			margin: 0 0 0 6px;
-			color: $white;
-			font-family: $font-logo;
-			font-weight: normal;
-			text-decoration: none;
-			font-size: $font-size-p;
-			@include breakpoint(xxs) {
-				font-size: $font-size-h1;
-				margin-left: 12px;
-			}
+		.wordmark {
+			height: 32px;
 		}
 	}
 }
