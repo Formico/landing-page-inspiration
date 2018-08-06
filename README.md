@@ -1,5 +1,16 @@
-# gatsby-starter-default
-The default Gatsby starter.
+## Deploy
+
+When deploying the website you might need to first delete `node-modules/gh-pages/.cache`.
+
+`rm -rf node_modules/gh-pages/.cache`
+
+Then deploy to GitHub pages
+
+`npm run deploy`
+
+
+# formico-website
+The website for [formico.io](https://formico.io)
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
@@ -18,9 +29,6 @@ gatsby new gatsby-example-site
 Then you can run it by:
 ```sh
 cd gatsby-example-site
-gatsby develop
+npm run develop
 ```
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
