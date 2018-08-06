@@ -11,7 +11,7 @@ export default class CTA extends Component {
     } = this.props;
 
     return (
-      <Link className="button-cta" to={ link }>{ text }</Link>
+      <a className="button-cta" href={ link }>{ text }</a>
     );
   }
 }
