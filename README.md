@@ -1,3 +1,6 @@
+## formico-website
+The website for [formico.io](https://formico.io)
+
 ## Deploy
 
 When deploying the website you might need to first delete `node-modules/gh-pages/.cache`.
@@ -9,10 +12,24 @@ Then deploy to GitHub pages
 `npm run deploy`
 
 
-# formico-website
-The website for [formico.io](https://formico.io)
+## Dev Branch vs Deploy Branch
+
+Development is done on the dev branch.
+
+Deploys get uploaded to the master branch.
+
+This is a naming limitation of GitHub pages [see here](https://help.github.com/articles/user-organization-and-project-pages/)
+
+to save your work
+
+```
+git push origin dev
+```
+
+## Gatsby Info
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+
 
 ## Install
 
