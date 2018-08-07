@@ -29,13 +29,14 @@ const Layout = ({ children, data }) => (
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
 
-      // Fonts
-      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
     </Helmet>
     <Header siteTitle={ data.site.siteMetadata.title } />
     <div>
       { children() }
     </div>
+
+    // Fonts
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
   </div>
 )
 
