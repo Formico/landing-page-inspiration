@@ -2,30 +2,24 @@
 @import '../../common/breakpoints.scss';
 @import '../../common/colors.scss';
 @import '../../common/fonts.scss';
-@import '../../common/shapes.scss';
 
 .splash {
 	background: $eggplant;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	width: 100vw;
-
-
-	// Mobile Responsiveness
-	height: 300px;
-
-	@include breakpoint(xxs) {
-		height: 480px;
-	}
-
-	@include breakpoint(sm) {
-		height: 680px;
-	}
+	height: 100vh;
+	padding: 0 24px;
 
 	.logo {
-		margin-top: 48px;
-		height: 128px;
+		margin-top: 64px;
+		height: 64px;
+
+		@include breakpoint(sm) {
+			height: 128px;
+		}
 	}
 
 	h1.tagline, h1.biline {
@@ -34,29 +28,32 @@
 		display: flex;
 		flex-direction: row;
 		font-family: $font-body;
-
-		@include breakpoint(xxs) {
-			font-size: $font-size-display;
-		}
 	}
 
 	h1.tagline {
-		margin-top: 48px;
 		font-weight: bold;
-		font-size: 64px;
+		margin-top: 24px;
+		font-size: 32px;
+
+		@include breakpoint(sm) {
+			margin-top: 48px;
+			font-size: 64px;
+		}
 	}
 
 	h1.biline {
 		font-weight: normal;
-		font-size: 48px;
+		font-size: 24px;
+
+		@include breakpoint(sm) {
+			font-size: 48px;
+		}
 	}
 
 	.button-cta {
 		margin-top: 32px;
-		font-family: $font-body;
-		font-weight: bold;
 
-		@include breakpoint(xxs) {
+		@include breakpoint(sm) {
 			margin-top: 48px;
 		}
 	}

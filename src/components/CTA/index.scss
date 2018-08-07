@@ -8,10 +8,11 @@
 	justify-content: center;
 	background: $logo-green;
 	font-family: $font-body;
+	font-weight: bold;
 	border: 1px solid $logo-green;
 	text-decoration: none;
 	color: $eggplant;
-	border-radius: 6px;
+	border-radius: 24px;
 
 	font-size: 16px;
 	height: 48px;
@@ -20,9 +21,11 @@
 	@include breakpoint(xxs) {
 		font-size: $font-size-h2;
 		height: 72px;
+		border-radius: 48px;
 	}
 
 	&:hover {
 		background: $hover-green;
+		color: #1b1b33;
 	}
 }
