@@ -9,9 +9,10 @@ import './index.scss'
 const Splash = ({ data }) => {
   return (
   <div className="splash">
-    <h1 className="hero"><FlashyText text="We build great software." /></h1>
-    <h1 className="mobile">We build great software.</h1>
-    <CTA text="Let's Talk" link="https://formico.typeform.com/to/CvuKzs" />
+    <img className="logo" src="/logo/formico-logo.svg" />
+    <h1 className="tagline">Stop Looking For Your Dev Team</h1>
+    <h1 className="biline">You've Already Found Us</h1>
+    <CTA text="Tell Me More" link="https://formico.typeform.com/to/CvuKzs" />
   </div>
   )
 }

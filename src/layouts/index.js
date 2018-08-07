@@ -28,6 +28,9 @@ const Layout = ({ children, data }) => (
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#242444" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
+
+      // Fonts
+      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
     </Helmet>
     <Header siteTitle={ data.site.siteMetadata.title } />
     <div>

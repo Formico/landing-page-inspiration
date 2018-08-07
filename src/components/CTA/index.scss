@@ -8,6 +8,7 @@
 	justify-content: center;
 	background: $logo-green;
 	font-family: $font-body;
+	border: 1px solid $logo-green;
 	text-decoration: none;
 	color: $eggplant;
 	border-radius: 6px;
@@ -22,7 +23,6 @@
 	}
 
 	&:hover {
-		background: $white;
-		color: $logo-green;
+		background: $hover-green;
 	}
 }
