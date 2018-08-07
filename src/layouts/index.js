@@ -35,7 +35,6 @@ const Layout = ({ children, data }) => (
       { children() }
     </div>
 
-    // Fonts
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
   </div>
 )
