@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import Step from './Step';
-import FlashyText from '../FlashyText';
 
 import './index.scss'
 
@@ -31,7 +30,7 @@ const steps = [
 
 const Process = () => (
   <div className="process">
-    <h1 className="hero"><FlashyText text="How we work" /></h1>
+    //<h1 className="hero"><FlashyText text="How we work" /></h1>
     <h1 className="mobile">How we work</h1>
     <div className="steps">
       { steps }

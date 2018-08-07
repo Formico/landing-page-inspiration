@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import FlashyText from '../FlashyText';
 import CTA from '../CTA';
 
 import './index.scss'

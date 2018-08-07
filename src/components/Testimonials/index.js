@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import Quote from './Quote';
-import FlashyText from '../FlashyText';
 
 import './index.scss'
 
@@ -39,7 +38,6 @@ const quotes = [
 
 const Testimonials = () => (
   <div className="testimonials">
-    <h1 className="hero"><FlashyText text="What our clients are saying about us" /></h1>
     <h1 className="mobile">What our clients are saying about us</h1>
     <div className="quotes">
       { quotes }
