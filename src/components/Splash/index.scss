@@ -6,6 +6,7 @@
 .splash {
 	background: $eggplant;
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
@@ -16,10 +17,6 @@
 	.logo {
 		margin-top: 64px;
 		height: 64px;
-
-		@include breakpoint(sm) {
-			height: 128px;
-		}
 	}
 
 	h1.tagline, h1.biline {
@@ -34,27 +31,38 @@
 		font-weight: bold;
 		margin-top: 24px;
 		font-size: 32px;
-
-		@include breakpoint(sm) {
-			margin-top: 48px;
-			font-size: 64px;
-		}
 	}
 
 	h1.biline {
 		font-weight: normal;
 		font-size: 24px;
-
-		@include breakpoint(sm) {
-			font-size: 48px;
-		}
 	}
 
 	.button-cta {
+		z-index: 1;
 		margin-top: 32px;
+	}
+
+	.ant-path {
+    position: absolute;
+    stroke-dasharray: 10;
+		width: 180%;
+		top: -170px;
+    animation: dash 5s linear infinite;
 
 		@include breakpoint(sm) {
-			margin-top: 48px;
+			width: 120%;
+		}
+		@include breakpoint(md) {
+			top: -240px;
+			width: 90%;
+		}
+	}
+
+
+	@keyframes dash {
+		to {
+			stroke-dashoffset: -80;
 		}
 	}
 }
