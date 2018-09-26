@@ -14,12 +14,12 @@ const steps = [
   {
     icon: "world.svg",
     header: "2. Team Assembled",
-    description: "We tap our network of top engineers, product managers, and designers to build your dream team."
+    description: "We find the best engineers, designers, and product managers for the job."
   },
   {
-    icon: "package.svg",
+    icon: "briefcase.svg",
     header: "3. Get to Work",
-    description: "We'll set up a private slack channel for you and your new Formico team."
+    description: "Intelligent milestones, minimum weekly updates, and direct access to your team."
   }
 ].map((step, idx) => (
   <Step key={ idx }
@@ -30,10 +30,15 @@ const steps = [
 
 const Process = () => (
   <div className="process">
-    <h1 className="mobile">How we work</h1>
+    <div className="top-accent-1" />
+    <div className="top-accent-2" />
+    <h1 className="mobile">We Can Build It</h1>
+    <h1 className="hero">We Can Build It</h1>
     <div className="steps">
       { steps }
     </div>
+    <div className="bottom-accent-1" />
+    <div className="bottom-accent-2" />
   </div>
 )
 

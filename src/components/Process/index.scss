@@ -10,14 +10,75 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	@include clip-path(polygon(0 0, 100% $slope/4, 100% 100%, 0 100% - $slope/4));
-	@include breakpoint(sm) {
-		@include clip-path(polygon(0 0, 100% $slope, 100% 100%, 0 100% - $slope));
-	}
-
 	height: 100%;
 	min-height: 600px;
+	position: relative;
+
+	@include clip-path(polygon(0 0, 100% $slope/4, 100% 100%, 0 100% - $slope/4));
+
+	.top-accent-1 {
+		position: absolute;
+		top: -5px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .3;
+		@include clip-path(polygon(0 0, 100% 0, 100% 100%, 0 0));
+
+		@include breakpoint(sm) {
+			top: -15px;
+			height: 50px;
+		}
+	}
+
+	.top-accent-2 {
+		position: absolute;
+		top: -10px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .7;
+		@include clip-path(polygon(0 0, 100% 0, 100% 0, 0 100%));
+
+		@include breakpoint(sm) {
+			top: -15px;
+			height: 40px;
+		}
+	}
+
+	.bottom-accent-1 {
+		position: absolute;
+		bottom: -10px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .7;
+		@include clip-path(polygon(0 100%, 100% 0, 100% 100%, 0 100%));
+
+		@include breakpoint(sm) {
+			bottom: -25px;
+			height: 50px;
+		}
+	}
+
+	.bottom-accent-2 {
+		position: absolute;
+		bottom: -5px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .3;
+		@include clip-path(polygon(0 0, 100% 100%, 100% 100%, 0 50%));
+
+		@include breakpoint(sm) {
+			bottom: -10px;
+			height: 40px;
+		}
+	}
 
 	h1 {
 		color: $eggplant;
@@ -57,6 +118,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 96px;
+		max-width: 1200px;
 
 		@include breakpoint(sm) {
 			flex-direction: row;
@@ -66,9 +128,10 @@
 		}
 
 		.step {
-			margin-top: 60px;
+			margin: 60px 12px;
+		
 			@include breakpoint(sm) {
-				margin: 0;
+				margin-top: 0;
 			}
 		}
 	}
