@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 const IndexPage = ({ ctaUrl }) => (
   <div>
     <Splash ctaUrl={ ctaUrl }/>
+    <Process />
   </div>
 )
 

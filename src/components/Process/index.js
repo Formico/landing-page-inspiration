@@ -30,7 +30,6 @@ const steps = [
 
 const Process = () => (
   <div className="process">
-    //<h1 className="hero"><FlashyText text="How we work" /></h1>
     <h1 className="mobile">How we work</h1>
     <div className="steps">
       { steps }
