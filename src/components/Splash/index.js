@@ -13,9 +13,6 @@ const Splash = ({ data }) => {
     <h1 className="tagline">Stop Looking For Your Dev Team</h1>
     <h1 className="biline">You've Already Found Us</h1>
     <CTA text="I Have a Project" link="https://formico.typeform.com/to/CvuKzs" />
-    <ReactSVG
-      path="/svg/ant-path.svg"
-      className="ant-path" />
   </div>
   )
 }
