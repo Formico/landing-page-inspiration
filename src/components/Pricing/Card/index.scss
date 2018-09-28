@@ -1,0 +1,39 @@
+@import '../../../common/animations.scss';
+@import '../../../common/breakpoints.scss';
+@import '../../../common/colors.scss';
+@import '../../../common/fonts.scss';
+
+.pricing-card {
+	width: 100%;
+	text-align: center;
+	color: $logo-green;
+	border: 1px solid $logo-green;
+	border-radius: 12px;
+	font-family: $font-body;
+	margin: 12px;
+
+	@include breakpoint(sm) {
+		width: 320px;
+	}
+
+	h2.header {
+		padding: 12px;
+		margin: 0;
+		font-size: 24px;
+		font-weight: normal;
+	}
+
+	ol.pricing-features {
+		list-style-position: inside;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		list-style-type: disc;
+
+		li.feature {
+			border-top: 1px solid $logo-green;
+			padding: 24px 12px;
+			margin: 0;
+		}
+	}
+}

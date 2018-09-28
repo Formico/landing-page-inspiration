@@ -3,14 +3,13 @@ import Link from 'gatsby-link'
 
 import Splash from '../components/Splash';
 import Process from '../components/Process';
-import Contact from '../components/Contact';
-import Testimonials from '../components/Testimonials';
-import Footer from '../components/Footer';
+import Pricing from '../components/Pricing';
 
 const IndexPage = ({ ctaUrl }) => (
   <div>
     <Splash ctaUrl={ ctaUrl }/>
     <Process />
+    <Pricing />
   </div>
 )
 
