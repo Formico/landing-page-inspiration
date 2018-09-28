@@ -13,7 +13,7 @@
 	width: 100%;
 	height: 100%;
 	min-height: 600px;
-	padding: 0 24px;
+	padding: 48px 24px;
 
 	h1.tagline {
 		color: $logo-green;
@@ -21,7 +21,6 @@
 		display: flex;
 		flex-direction: row;
 		font-family: $font-body;
-		margin-top: 48px;
 		font-size: 32px;
 	}
 

@@ -32,7 +32,7 @@ const Process = () => (
   <div className="process">
     <div className="top-accent-1" />
     <div className="top-accent-2" />
-    <h1>We Can Build It</h1>
+    <h1>Our process puts you first.</h1>
     <div className="steps">
       { steps }
     </div>

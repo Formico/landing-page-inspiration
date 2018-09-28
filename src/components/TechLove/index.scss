@@ -1,0 +1,116 @@
+@import '../../common/animations.scss';
+@import '../../common/breakpoints.scss';
+@import '../../common/colors.scss';
+@import '../../common/fonts.scss';
+@import '../../common/shapes.scss';
+
+.tech-love {
+	background: $white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	min-height: 750px;
+	position: relative;
+
+	@include clip-path(polygon(0 0, 100% $slope/8, 100% 100%, 0 100% - $slope/8));
+
+	@include breakpoint(sm) {
+		@include clip-path(polygon(0 0, 100% $slope/4, 100% 100%, 0 100% - $slope/4));
+	}
+
+	.top-accent-1 {
+		position: absolute;
+		top: -5px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .3;
+		@include clip-path(polygon(0 0, 100% 0, 100% 100%, 0 0));
+
+		@include breakpoint(sm) {
+			top: -15px;
+			height: 50px;
+		}
+	}
+
+	.top-accent-2 {
+		position: absolute;
+		top: -10px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .7;
+		@include clip-path(polygon(0 0, 100% 0, 100% 0, 0 100%));
+
+		@include breakpoint(sm) {
+			top: -15px;
+			height: 40px;
+		}
+	}
+
+	.bottom-accent-1 {
+		position: absolute;
+		bottom: -10px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .7;
+		@include clip-path(polygon(0 100%, 100% 0, 100% 100%, 0 100%));
+
+		@include breakpoint(sm) {
+			bottom: -25px;
+			height: 50px;
+		}
+	}
+
+	.bottom-accent-2 {
+		position: absolute;
+		bottom: -5px;
+		height: 30px;
+
+		width: 110%;
+		background: $eggplant;
+		opacity: .3;
+		@include clip-path(polygon(0 0, 100% 100%, 100% 100%, 0 50%));
+
+		@include breakpoint(sm) {
+			bottom: -10px;
+			height: 40px;
+		}
+	}
+
+	.content {
+		h2.title {
+			color: $eggplant;
+			font-weight: normal;
+			font-size: 32px;
+			text-align: center;
+
+			@include breakpoint(sm) {
+				font-size: 36px;
+			}
+		}
+
+		.logos {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: center;
+			width: 100%;
+			max-width: 800px;
+			padding-top: 24px;
+			.logo {
+				height: 80px;
+				margin: 12px;
+				@include breakpoint(sm) {
+					height: 100px;
+					margin: 24px;
+				}
+			}
+		}
+	}
+}
