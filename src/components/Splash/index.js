@@ -11,7 +11,7 @@ const Splash = ({ data }) => {
   <div className="splash">
     <img className="logo" src="/logo/formico-logo.svg" />
     <h1 className="tagline">Stop Looking For Your Dev Team</h1>
-    <h1 className="biline">You've Already Found Us</h1>
+    <h1 className="biline">You've already found us.</h1>
     <CTA text="I Have a Project" link="https://formico.typeform.com/to/CvuKzs" />
   </div>
   )

@@ -6,7 +6,8 @@ import './index.scss'
 
 const Contact = () => (
   <div className="contact">
-    <CTA text="Free Consultation" link="https://formico.typeform.com/to/CvuKzs" />
+    <h2>Are you ready to ... build your mvp</h2>
+    <CTA text="I'm Ready" link="https://formico.typeform.com/to/CvuKzs" />
   </div>
 )
 

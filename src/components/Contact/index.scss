@@ -1,7 +1,7 @@
 @import '../../common/animations.scss';
 @import '../../common/breakpoints.scss';
 @import '../../common/colors.scss';
-@import '../../common/shapes.scss';
+@import '../../common/fonts.scss';
 
 .contact {
 	background: $eggplant;
@@ -9,15 +9,16 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	// Slanted edge
-  // @include clip-path(polygon(0 0, 100% $slope, 100% 100%, 0 100% - $slope));
-  @include clip-path(polygon(0 0, 100% $slope, 100% 100%, 0 100%));
-	
-	// Mobile Responsiveness
 	height: 240px;
 
 	@include breakpoint(xxs) {
 		height: 480px;
+	}
+
+
+	h2 {
+		color: $white;
+		font-family: $font-body;
+		font-weight: normal;
 	}
 }
