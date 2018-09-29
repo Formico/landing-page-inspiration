@@ -9,16 +9,29 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 240px;
+	height: 480px;
+	color: $white;
+	margin: 12px;
 
-	@include breakpoint(xxs) {
-		height: 480px;
+	.cursor {
+		color: $white;
 	}
 
-
 	h2 {
-		color: $white;
 		font-family: $font-body;
 		font-weight: normal;
+		width: 100%;
+		height: 24px;
+		text-align: left;
+		@include breakpoint(sm) {
+			width: 604px;
+		}
+		span {
+			display: inline-block;
+		}	
+	}
+
+	.button-cta {
+		margin-top: 48px;
 	}
 }
