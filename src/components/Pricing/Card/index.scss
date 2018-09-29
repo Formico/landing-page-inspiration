@@ -10,9 +10,8 @@
 	border: 1px solid $logo-green;
 	border-radius: 12px;
 	font-family: $font-body;
-	margin: 12px;
 
-	@include breakpoint(sm) {
+	@include breakpoint(xs) {
 		width: 320px;
 	}
 

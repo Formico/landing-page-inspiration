@@ -91,6 +91,7 @@
 		flex-direction: row;
 		font-size: 32px;
 		margin-top: 92px;
+		padding: 0 12px;
 
 		@include breakpoint(sm) {
 			font-size: 36px;
