@@ -12,13 +12,14 @@ const Layout = ({ children, data }) => (
       <title>{ data.site.siteMetadata.title }</title>
 
       // SEO attributes
-      <meta name="description" content="Formico - Software Development Agency" />
+      <meta name="description" content="Formico is a software development agency that helps companies build advanced custom software solutions. We specialize in full stack web development, cloud infrastructure, and machine learning technology development." />
       <meta name="keywords" content="software, design, development, product, product management, websites, react, react native, node" />
 
       // Open Graph
-      <meta property="og:title" content="Formico" />
-      <meta name="og:descripttion" content="software, design, development, product, product management, websites, react, react native, node" />
+      <meta property="og:title" content="Formico | Software Development Agency" />
+      <meta name="og:description" content="Formico is a software development agency that helps companies build advanced custom software solutions. We specialize in full stack web development, cloud infrastructure, and machine learning technology development." />
       <meta property="og:url" content="https://formico.io" />
+      <meta property="og:image" content="/img/formicoOpenGraph.png" />
 
       // favicon attributes
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
