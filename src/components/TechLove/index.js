@@ -37,7 +37,7 @@ const logos = [
     description: "NodeJS"
   }
 ].map((logo, idx) => (
-  <img className="logo" src={ `/foreign-logos/${logo.icon}` } alt={ `${logo.description}` } />
+  <img className="logo" key={ idx } src={ `/foreign-logos/${logo.icon}` } alt={ `${logo.description}` } />
 ));
 
 const TechLove = () => (
