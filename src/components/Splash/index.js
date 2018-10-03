@@ -3,8 +3,7 @@ import Link from 'gatsby-link'
 import ReactSVG from 'react-svg'
 
 import CTA from '../CTA';
-
-import FancyBackground from './FancyBackground';
+import FancyBackground from '../FancyBackground';
 
 import './index.scss'
 

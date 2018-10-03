@@ -1,8 +1,4 @@
-@import '../../common/animations.scss';
-@import '../../common/breakpoints.scss';
-@import '../../common/colors.scss';
-@import '../../common/fonts.scss';
-@import '../../common/shapes.scss';
+@import '../../common/common.scss';
 
 .tech-love {
 	background: $white;
@@ -13,6 +9,7 @@
 	height: 100%;
 	min-height: 750px;
 	position: relative;
+	z-index: $layer-1;
 
 	@include clip-path(polygon(0 0, 100% $slope/8, 100% 100%, 0 100% - $slope/8));
 

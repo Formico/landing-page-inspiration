@@ -2,11 +2,13 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 
 import CTA from '../CTA';
+import FancyBackground from '../FancyBackground';
 
 import './index.scss'
 
 const Contact = () => (
   <div className="contact">
+    <FancyBackground />
     <h2>
       <Typing
         cursorClassName="cursor"

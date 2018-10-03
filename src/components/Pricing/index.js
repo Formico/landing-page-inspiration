@@ -6,11 +6,14 @@ import Card from './Card';
 
 import CTA from '../CTA';
 
+import FancyBackground from '../FancyBackground';
+
 import './index.scss'
 
 const Pricing = ({ data }) => {
   return (
   <div className="pricing">
+    <FancyBackground />
     <h1 className="tagline">Pricing</h1>
     <div className="pricing-cards">
       <Card

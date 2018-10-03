@@ -1,4 +1,4 @@
-@import '../../../common/common.scss';
+@import '../../common/common.scss';
 
 .fancy-background {
 	position: absolute;
@@ -72,8 +72,14 @@
 		}
 	}
 
-	@include breakpoint(sm) {
-		.col-0, .col-1 {
+	@include breakpoint(md) {
+		.col-1 {
+			display: block;
+		}
+	}
+
+	@include breakpoint(lg) {
+		.col-0 {
 			display: block;
 		}
 	}
