@@ -1,0 +1,125 @@
+/* Animations */
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform-origin($transforms) {
+	-webkit-transform-origin: $transforms;
+	-moz-transform-origin: $transforms;
+	-ms-transform-origin: $transforms;
+	transform-origin: $transforms;
+}
+
+@mixin clip-path($path) {
+	-webkit-clip-path: $path;
+	-moz-clip-path: $path;
+	-ms-clip-path: $path;
+	clip-path: $path;
+}
+// https://medium.com/developing-with-sass/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+
+
+/* Breakpoints */
+@mixin breakpoint($class) {
+  @if $class == xxs {
+    @media (min-width: 376px) { @content; }
+  }
+
+  @else if $class == xs {
+    @media (min-width: 576px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else if $class == print {
+    @media print { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, print";
+  }
+}
+
+
+/* Colors */
+
+$eggplant: #242444;
+//$logo-green: #0CC6B1;
+$logo-green: #15f0d8;
+$hover-green: #0cc6b1;
+$white: #FFFFFF;
+$black: #333;
+
+$hover-opacity: 0.75;
+
+
+/* Fonts */
+
+$font-body: 'Nunito', 'Helvetica', sans-serif;
+$font-logo: 'Courier', monospace;
+
+$font-size-display: 64px;
+$font-size-h1: 48px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+
+$font-size-p: 18px;
+
+$line-height: 24px;
+
+
+/* Layers */
+
+$layer-0: 0;
+$layer-1: 1;
+
+
+/* Shapes */
+
+$slope: 5%;
