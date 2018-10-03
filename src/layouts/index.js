@@ -30,6 +30,9 @@ const Layout = ({ children, data }) => (
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
 
+      // Google Verification
+      <meta name="google-site-verification" content="5UxDOlpohJhsr73rfK0UYxd_yUQUiEf-TcnmZ8jPVCQ" />
+
     </Helmet>
     <Header siteTitle={ data.site.siteMetadata.title } />
     <div>
