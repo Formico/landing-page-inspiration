@@ -3,7 +3,6 @@ import React from 'react'
 import './index.scss'
 
 const PricingCard = ({ header, items }) => {
-  console.log(items);
   return (
    <div className="pricing-card">
     <h2 className="header">{ `${header}` }</h2>

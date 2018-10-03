@@ -1,0 +1,13 @@
+@import '../../../common/animations.scss';
+@import '../../../common/breakpoints.scss';
+@import '../../../common/colors.scss';
+@import '../../../common/fonts.scss';
+
+.fancy-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
