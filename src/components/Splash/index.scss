@@ -1,7 +1,6 @@
 @import '../../common/common.scss';
 
 .splash {
-	background: $eggplant;
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -10,11 +9,6 @@
 	width: 100%;
 	height: 500px;
 	padding: 0 24px;
-
-
-	.logo, h1, .button-cta {
-		z-index: $layer-1;
-	}
 
 	.logo {
 		margin-top: 64px;

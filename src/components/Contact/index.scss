@@ -1,7 +1,6 @@
 @import '../../common/common.scss';
 
 .contact {
-	background: $eggplant;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -20,7 +19,6 @@
 		width: 100%;
 		height: 24px;
 		text-align: left;
-		z-index: $layer-1;
 		@include breakpoint(sm) {
 			width: 604px;
 		}
@@ -30,7 +28,6 @@
 	}
 
 	.button-cta {
-		z-index: $layer-1;
 		margin-top: 48px;
 	}
 }

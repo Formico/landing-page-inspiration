@@ -11,7 +11,7 @@ class FancyBackground extends React.Component {
     for (let i = 0; i < 6; i++) {
       let cells = []
 
-      for (let j = 0; j < 12; j++) {
+      for (let j = 0; j < 50; j++) {
         let cellType = cellTypes[Math.floor(Math.random() * cellTypes.length)];
         cells.push(<div key={ j } className={ `fancy-cell ${cellType}` } />);
       }

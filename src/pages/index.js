@@ -7,9 +7,11 @@ import Pricing from '../components/Pricing';
 import TechLove from '../components/TechLove';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import FancyBackground from '../components/FancyBackground';
 
 const IndexPage = ({ ctaUrl }) => (
-  <div>
+  <div style={{ position: 'relative' }}>
+    <FancyBackground />
     <Splash ctaUrl={ ctaUrl }/>
     <Process />
     <Pricing />

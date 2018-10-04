@@ -8,7 +8,6 @@
 	border-radius: 12px;
 	font-family: $font-body;
 	background: $eggplant;
-	z-index: $layer-1;
 
 	@include breakpoint(xs) {
 		width: 320px;
