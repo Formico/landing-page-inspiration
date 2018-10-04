@@ -87,6 +87,8 @@
 			font-weight: normal;
 			font-size: 32px;
 			text-align: center;
+			margin-left: 4px;
+			margin-right: 4px;
 
 			@include breakpoint(sm) {
 				font-size: 36px;
