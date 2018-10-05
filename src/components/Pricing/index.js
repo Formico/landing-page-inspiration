@@ -14,11 +14,11 @@ const Pricing = ({ data }) => {
     <h1 className="tagline">Pricing</h1>
     <div className="pricing-cards">
       <Card
-        header="Hourly"
+        header="Weekly"
         items={[
-          "Starting at $175/hr",
+          "Team scales as needed",
           "Weekly descriptive invoices",
-          "Teams scale as needed"
+          "Starting at $7,500/wk",
         ]} />
       <p className="or">or</p>
       <Card
