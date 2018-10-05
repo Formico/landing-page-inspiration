@@ -17,7 +17,7 @@ const Pricing = ({ data }) => {
         header="Weekly"
         items={[
           "Team scales as needed",
-          "Weekly descriptive invoices",
+          "Descriptive invoices",
           "Starting at $7,500/wk",
         ]} />
       <p className="or">or</p>
