@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import Step from './Step';
+import FancyAccents from '../FancyAccents';
 
 import './index.scss'
 
@@ -30,14 +31,11 @@ const steps = [
 
 const Process = () => (
   <div className="process">
-    <div className="top-accent-1" />
-    <div className="top-accent-2" />
+    <FancyAccents />
     <h1>Our process puts you first.</h1>
     <div className="steps">
       { steps }
     </div>
-    <div className="bottom-accent-1" />
-    <div className="bottom-accent-2" />
   </div>
 )
 

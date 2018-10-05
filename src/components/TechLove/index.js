@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import FancyAccents from '../FancyAccents';
+
 import './index.scss'
 
 const logos = [
@@ -42,16 +44,13 @@ const logos = [
 
 const TechLove = () => (
   <div className="tech-love">
-    <div className="top-accent-1" />
-    <div className="top-accent-2" />
+    <FancyAccents />
     <div className="content">
       <h2 className="title">We build technology solutions you'll love.</h2>
       <div className="logos">
         { logos }
       </div>
     </div>
-    <div className="bottom-accent-1" />
-    <div className="bottom-accent-2" />
   </div>
 )
 
