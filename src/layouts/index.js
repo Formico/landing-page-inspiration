@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header'
 import './reset.css'
 import './index.scss'
 
@@ -34,7 +33,6 @@ const Layout = ({ children, data }) => (
       <meta name="google-site-verification" content="5UxDOlpohJhsr73rfK0UYxd_yUQUiEf-TcnmZ8jPVCQ" />
 
     </Helmet>
-    <Header siteTitle={ data.site.siteMetadata.title } />
     <div>
       { children() }
     </div>

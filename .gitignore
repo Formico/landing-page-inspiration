@@ -8,6 +8,7 @@ yarn-error.log
 
 # images
 /static/img/team
+/static/img/screenshots
 
 # Temporary Files
 *swo
