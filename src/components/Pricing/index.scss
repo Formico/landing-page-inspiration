@@ -24,10 +24,11 @@
 	.pricing-cards {
 		display: flex;
 		flex-direction: column;
+		margin: 32px 0;
 
 		@include breakpoint(sm) {
 			flex-direction: row;
-			margin: 24px;
+			margin: 32px 24px;
 		}
 	}
 

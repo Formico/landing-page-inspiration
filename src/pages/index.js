@@ -15,6 +15,7 @@ const IndexPage = ({ ctaUrl }) => (
     <FancyBackground />
     <Splash ctaUrl={ ctaUrl }/>
     <Team />
+    <Process />
     <Pricing />
     <TechLove />
     <Contact />

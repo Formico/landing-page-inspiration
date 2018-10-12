@@ -6,7 +6,7 @@
 	.icon {
 		width: 100%;
 		margin: auto;
-		fill: $eggplant;
+		fill: $logo-green;
 		text-align: center;
 		svg {
 			width: 84px;
@@ -19,14 +19,14 @@
 		align-items: center;
 		h2.header {
 			background: none;
-			color: $eggplant;
+			color: $logo-green;
 			font-size: $font-size-p;
 			font-family: $font-body;
 			font-weight: bold;
 			margin: 24px 0;
 		}
 		p.description {
-			color: $eggplant;
+			color: $logo-green;
 			font-size: $font-size-p;
 			font-family: $font-body;
 			line-height: $line-height;

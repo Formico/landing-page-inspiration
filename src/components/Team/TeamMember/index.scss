@@ -1,8 +1,16 @@
 @import '../../../common/common.scss';
 
-.step {
-	width: 200px;
+.team-member {
 	text-align: center;
+	max-width: 200px;
+	margin-bottom: 24px;
+	
+	@include breakpoint(sm) {
+		width: 20%;
+		padding: 12px;
+		margin-bottom: 0;
+	}
+
 	img {
 		width: 100%;
 		margin: auto;
