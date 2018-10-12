@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import Splash from '../components/Splash';
+import Team from '../components/Team';
 import Process from '../components/Process';
 import Pricing from '../components/Pricing';
 import TechLove from '../components/TechLove';
@@ -13,7 +14,7 @@ const IndexPage = ({ ctaUrl }) => (
   <div style={{ position: 'relative' }}>
     <FancyBackground />
     <Splash ctaUrl={ ctaUrl }/>
-    <Process />
+    <Team />
     <Pricing />
     <TechLove />
     <Contact />

@@ -5,7 +5,9 @@ yarn-error.log
 
 # Build directory
 /public
-.DS_Store
+
+# images
+/static/img/team
 
 # Temporary Files
 *swo
