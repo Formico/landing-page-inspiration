@@ -1,4 +1,16 @@
 @import '../../../common/common.scss';
 
 .lpi-landing-pages {
+	display: flex;	
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+	.lpi-preview {
+		width: 25%;
+		max-height: 500px;
+		margin: 48px 24px;
+
+		@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
+	}
 }

@@ -4,13 +4,9 @@ import routes from '../../../../constants/routes'
 
 import './index.scss'
 
-const Preview = ({ name, image, roles }) => (
+const Preview = ({ title, filename }) => (
   <div className="lpi-preview">
-    <img src={ `${routes.IMG}/${image}` } />
-    <div className="text">
-      <h2 className="name">{ `${name}` }</h2>
-      <p className="roles">{ `${roles}` }</p>
-    </div>
+    <img alt={ `${title}` } src={ `${routes.IMG}/screenshots/desktop/${filename}` } />
   </div>
 )
 
