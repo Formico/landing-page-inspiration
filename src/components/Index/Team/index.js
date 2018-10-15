@@ -8,14 +8,9 @@ import './index.scss'
 
 /* Roles */
 const FS_ENG = "Full-Stack Engineer",
-      FE_ENG = "Frontend Engineer",
-      BE_ENG = "Backend Engineer",
       DES    = "Designer",
-      PDM    = "Product Manager",
       PJM    = "Project Manager",
-      ML_ENG = "Machine Learning Engineer",
-      BL_ENG = "Blockchain Engineer",
-      FNDR   = "Founder";
+      ML_ENG = "Machine Learning Engineer";
 
 /* Technologies */
 const REACT  = "React",
@@ -23,8 +18,7 @@ const REACT  = "React",
       GD     = "Graphic Design",
       JS     = "Javascript",
       PY     = "Python",
-      AWS    = "Amazon Web Services",
-      GCP    = "Google Cloud Provider";
+      AWS    = "Amazon Web Services";
 
 const team = [
   {

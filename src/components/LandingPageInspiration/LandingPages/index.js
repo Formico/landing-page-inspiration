@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Preview from './Preview';
+//import Preview from './Preview';
 
 import './index.scss'
 

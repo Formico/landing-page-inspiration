@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import ReactSVG from 'react-svg'
 
 import Card from './Card';
 

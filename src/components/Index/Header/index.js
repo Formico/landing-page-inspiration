@@ -7,7 +7,7 @@ const Header = () => (
   <div className="site-header">
     <Link to="/">
       <div className="logo-container">
-        <img className="wordmark" src="/logo/formico-wordmark.svg" />
+        <img alt="" className="wordmark" src="/logo/formico-wordmark.svg" />
       </div>
     </Link>
   </div>

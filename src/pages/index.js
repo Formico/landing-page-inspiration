@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import FancyBackground from '../components/Index/FancyBackground';
 import Header from '../components/Index/Header';

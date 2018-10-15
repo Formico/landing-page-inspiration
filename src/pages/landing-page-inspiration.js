@@ -10,6 +10,7 @@ const LandingPageInspiration = () => (
     <Header />
     <h1>Landing Pages</h1>
     <Link to="/">Go back to the homepage</Link>
+    <LandingPages />
     <Footer />
   </div>
 )
