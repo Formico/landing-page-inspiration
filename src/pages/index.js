@@ -1,15 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import FancyBackground from '../components/FancyBackground';
-import Header from '../components/Header';
-import Splash from '../components/Splash';
-import Team from '../components/Team';
-import Process from '../components/Process';
-import Pricing from '../components/Pricing';
-import TechLove from '../components/TechLove';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import FancyBackground from '../components/Index/FancyBackground';
+import Header from '../components/Index/Header';
+import Splash from '../components/Index/Splash';
+import Team from '../components/Index/Team';
+import Process from '../components/Index/Process';
+import Pricing from '../components/Index/Pricing';
+import TechLove from '../components/Index/TechLove';
+import Contact from '../components/Index/Contact';
+import Footer from '../components/Index/Footer';
 
 const IndexPage = ({ ctaUrl }) => (
   <div style={{ position: 'relative' }}>

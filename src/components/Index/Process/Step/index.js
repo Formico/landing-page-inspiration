@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactSVG from 'react-svg'
 
-import routes from '../../../constants/routes'
+import routes from '../../../../constants/routes'
 
 import './index.scss'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import routes from '../../../constants/routes'
+import routes from '../../../../constants/routes'
 
 import './index.scss'
 
