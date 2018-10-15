@@ -11,6 +11,8 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.3",
+    "gatsby-transformer-csv": "^2.0.2",
     "gh-pages": "^1.2.0",
     "node-sass": "^4.9.4",
     "react": "^16.5.1",

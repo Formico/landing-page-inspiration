@@ -1,6 +1,10 @@
-import React from 'react'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+
 
 //import Preview from './Preview';
+
+import routes from '../../../constants/routes'
 
 import './index.scss'
 
@@ -45,8 +49,37 @@ const team = [
 */
 
 const LandingPages = () => (
-  <div className="lpi-landing-pages">
-  </div>
+  <StaticQuery
+    query={graphql`
+      query {
+        allPagesCsv {
+          edges {
+            node {
+              url
+              title
+              categories
+              score
+              filename
+            }
+          }
+        }
+      }
+    `}
+    render={
+      data => {
+        console.log(data.allPagesCsv.edges);
+        const images = data.allPagesCsv.edges.map((node, idx) => (
+          <img key={ idx } alt={ `${node.node.title}` } src={ `${routes.IMG}/screenshots/desktop/${node.node.filename}` } />
+        ));
+        return (
+          <div className="lpi-landing-pages">
+            { images }
+          </div>
+        );
+      }
+    }
+  />
 )
 
 export default LandingPages
+
