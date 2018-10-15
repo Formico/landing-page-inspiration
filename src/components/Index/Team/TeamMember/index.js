@@ -6,7 +6,7 @@ import './index.scss'
 
 const TeamMember = ({ name, image, roles }) => (
   <div className="team-member">
-    <img src={ `${routes.IMG}/${image}` } />
+    <img src={ `${routes.IMG}/team/${image}` } />
     <div className="text">
       <h2 className="name">{ `${name}` }</h2>
       <p className="roles">{ `${roles}` }</p>

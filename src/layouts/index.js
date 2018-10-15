@@ -5,10 +5,10 @@ import Helmet from 'react-helmet'
 import './reset.css'
 import './index.scss'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <div>
     <Helmet>
-      <title>{ data.site.siteMetadata.title }</title>
+      <title>Formico</title>
 
       // SEO attributes
       <meta name="description" content="Formico is a software development agency that helps companies build advanced custom software solutions. We specialize in full stack web development, cloud infrastructure, and machine learning technology development." />
@@ -34,7 +34,7 @@ const Layout = ({ children, data }) => (
 
     </Helmet>
     <div>
-      { children() }
+      { children }
     </div>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
@@ -47,12 +47,3 @@ Layout.propTypes = {
 
 export default Layout
 
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

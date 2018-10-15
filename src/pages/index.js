@@ -10,19 +10,22 @@ import Pricing from '../components/Index/Pricing';
 import TechLove from '../components/Index/TechLove';
 import Contact from '../components/Index/Contact';
 import Footer from '../components/Index/Footer';
+import Layout from '../layouts';
 
 const IndexPage = ({ ctaUrl }) => (
-  <div style={{ position: 'relative' }}>
-    <FancyBackground />
-    <Header />
-    <Splash ctaUrl={ ctaUrl }/>
-    <Team />
-    <Process />
-    <Pricing />
-    <TechLove />
-    <Contact />
-    <Footer />
-  </div>
+  <Layout>
+    <div style={{ position: 'relative' }}>
+      <FancyBackground />
+      <Header />
+      <Splash ctaUrl={ ctaUrl }/>
+      <Team />
+      <Process />
+      <Pricing />
+      <TechLove />
+      <Contact />
+      <Footer />
+    </div>
+  </Layout>
 )
 
 export default IndexPage
