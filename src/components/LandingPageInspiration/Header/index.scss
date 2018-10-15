@@ -1,0 +1,30 @@
+@import '../../../common/common.scss';
+
+.lpi-header {
+	background: $eggplant;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	height: 64px;
+	padding: 0 24px;
+
+	@include breakpoint(sm) {
+		padding: 0 64px;
+		height: 128px;
+	}
+
+	.logo-container {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		height: 24px;
+
+		.wordmark {
+			z-index: $layer-1;
+
+			height: 32px;
+			margin-bottom: 0;
+		}
+	}
+}
