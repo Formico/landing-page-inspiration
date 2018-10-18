@@ -5,12 +5,21 @@ module.exports = {
   plugins: [
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
         path: `${__dirname}/static/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/img/`,
       },
     },
     `gatsby-transformer-csv`,

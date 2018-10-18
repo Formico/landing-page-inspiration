@@ -20,17 +20,36 @@ const LandingPages = () => (
             }
           }
         }
+        allFile(filter:{extension:{regex:"/png/"}, relativeDirectory:{eq:"screenshots/desktop"}}) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 2000) {
+                  originalName
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={
       data => {
-        console.log(data.allPagesCsv.edges);
-        const images = data.allPagesCsv.edges.map((node, idx) => (
-          <Preview
-            key={ idx}
-            title={ node.node.title }
-            filename={ node.node.filename } />
-        ));
+        let websiteData = {};
+        data.allPagesCsv.edges.map((edge, idx) => {
+          websiteData[edge.node.filename] = {
+            ...edge.node
+          }
+        });
+        const images = data.allFile.edges.map((edge, idx) => {
+          return (
+            <Preview
+              key={ idx }
+              title={ websiteData[edge.node.childImageSharp.fluid.originalName].title }
+              img={ edge.node.childImageSharp.fluid } />
+            )
+        });
         return (
           <div className="lpi-landing-pages">
             { images }

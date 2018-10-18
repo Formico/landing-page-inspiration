@@ -1,12 +1,14 @@
 import React from 'react'
+import Img from "gatsby-image"
 
 import routes from '../../../../constants/routes'
 
 import './index.scss'
 
-const Preview = ({ title, filename }) => (
+const Preview = ({ title, img }) => (
   <div className="lpi-preview">
-    <img alt={ `${title}` } src={ `${routes.IMG}/screenshots/desktop/${filename}` } />
+    <Img fluid={ img } />
+    <p>{ title }</p>
   </div>
 )
 

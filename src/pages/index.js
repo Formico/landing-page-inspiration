@@ -13,7 +13,7 @@ import Layout from '../layouts';
 
 const IndexPage = ({ ctaUrl }) => (
   <Layout>
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', background: '#141433' }}>
       <FancyBackground />
       <Header />
       <Splash ctaUrl={ ctaUrl }/>

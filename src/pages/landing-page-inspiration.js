@@ -9,7 +9,7 @@ import Footer from '../components/Index/Footer';
 
 const LandingPageInspiration = () => (
   <Layout>
-    <div style={{ minHeight: "100vh", background: "white" }}>
+    <div>
       <Header />
       <h1>Landing Pages</h1>
       <Link to="/">Go back to the homepage</Link>
