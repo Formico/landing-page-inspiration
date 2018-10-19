@@ -1,0 +1,36 @@
+@import '../../../common/common.scss';
+
+.lpi-filters {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.screen-size-selection {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 12px;
+
+		h4 {
+			margin: 0;
+			color: black;
+		}
+
+		.selectors {
+			display: flex;
+			flex-direction: row;
+			margin-top: 6px;
+			img {
+				height: 24px;
+				opacity: 0.5;
+				margin: auto 6px;
+				&.selected {
+					opacity: 1.0;
+				}
+			}
+		}
+	}
+}
