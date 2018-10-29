@@ -5,6 +5,8 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	background: white;
+	z-index: $layer-top;
 
 	.screen-size-selection {
 		height: 100%;

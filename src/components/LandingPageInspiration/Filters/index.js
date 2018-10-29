@@ -5,10 +5,11 @@ import routes from '../../../constants/routes.js';
 import './index.scss'
 
 const Filters = ({
+  style,
   selectedScreenSize,
   onScreenSizeChange
 }) => (
-  <section className="lpi-filters">
+  <div className="lpi-filters" style={ style }>
     <div className="screen-size-selection">
       <h4>Screen Size</h4>
       <div className="selectors">
@@ -29,7 +30,7 @@ const Filters = ({
           onClick={ () => onScreenSizeChange('desktop') } />
       </div>
     </div>
-  </section>
+  </div>
 )
 
 export default Filters

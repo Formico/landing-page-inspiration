@@ -62,7 +62,7 @@ const LandingPages = ({selectedScreenSize}) => (
       data => {
         console.log(data);
         let websiteData = {};
-        data.allPagesCsv.edges.map((edge, idx) => {
+        data.allPagesCsv.edges.forEach(edge => {
           websiteData[edge.node.filename] = {
             ...edge.node
           }
@@ -71,7 +71,7 @@ const LandingPages = ({selectedScreenSize}) => (
         let imageData;
         switch(selectedScreenSize) {
           case 'mobile':
-            imageData = data.mobileImages.edges;
+            imageData = data.tabletImages.edges;
             break;
           case 'tablet':
             imageData = data.tabletImages.edges;

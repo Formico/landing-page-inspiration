@@ -21,6 +21,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "react-sticky": "^6.0.3",
     "react-svg": "^4.1.1",
     "react-typing-animation": "^1.4.0"
   },

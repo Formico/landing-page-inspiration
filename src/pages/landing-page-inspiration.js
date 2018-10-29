@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import Layout from '../layouts';
 
@@ -26,15 +26,20 @@ class LandingPageInspiration extends React.Component {
   render() {
     return (
       <Layout>
-        <div>
-          <Header />
-          <Filters
-            selectedScreenSize={ this.state.selectedScreenSize }
-            onScreenSizeChange={ this.onScreenSizeChange } />
-          <LandingPages
-            selectedScreenSize={ this.state.selectedScreenSize } />
-          <Footer />
-        </div>
+        <Header />
+        <StickyContainer className="container">
+          <Sticky>
+            {({ style }) => (
+              <Filters
+                style={ style }
+                selectedScreenSize={ this.state.selectedScreenSize }
+                onScreenSizeChange={ this.onScreenSizeChange } />
+            )}
+          </Sticky>
+        <LandingPages
+          selectedScreenSize={ this.state.selectedScreenSize } />
+        <Footer />
+        </StickyContainer>
       </Layout>
     )
   }
