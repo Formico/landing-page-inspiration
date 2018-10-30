@@ -1,0 +1,14 @@
+@import '../../../common/common.scss';
+
+.lpi-copy {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	color: $logo-green;
+	font-family: $font-body;
+
+	height: 336px;
+	padding: 0 24px;
+}
