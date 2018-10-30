@@ -1,5 +1,8 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+
+import { pageUrlify } from '../../../common/functions'
+import routes from '../../../constants/routes'
 
 import Preview from './Preview';
 
@@ -80,13 +83,15 @@ const LandingPages = ({selectedScreenSize}) => (
             imageData = data.desktopImages.edges;
         }
         let images = imageData.map((edge, idx) => {
-          let siteData = websiteData[edge.node.childImageSharp.fluid.originalName];
-          console.log(siteData);
+          let originalName = edge.node.childImageSharp.fluid.originalName;
+          let siteData = websiteData[originalName];
+
           return (
             <Preview
               key={ idx }
-              title={ websiteData[edge.node.childImageSharp.fluid.originalName].title }
-              img={ edge.node.childImageSharp.fluid } />
+              title={ siteData.title }
+              img={ edge.node.childImageSharp.fluid }
+              url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />
             )
         });
         return (

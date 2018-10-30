@@ -7,10 +7,12 @@
 	.images-container {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
+		margin: 24px;
 
 		.screenshot {
 			width: 25%;
-			height: 500px;
+			height: 750px;
 			margin: 48px 24px;
 			overflow: scroll;
 

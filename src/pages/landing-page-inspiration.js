@@ -28,22 +28,24 @@ class LandingPageInspiration extends React.Component {
   render() {
     return (
       <Layout>
-        <Header />
-        <StickyContainer className="container">
-          <Sticky>
-            {({ style, isSticky, distanceFromTop }) => (
-              <Filters
-                style={ style }
-                isSticky={ isSticky }
-                distanceFromTop={ distanceFromTop }
-                selectedScreenSize={ this.state.selectedScreenSize }
-                onScreenSizeChange={ this.onScreenSizeChange } />
-            )}
-          </Sticky>
-        <LandingPages
-          selectedScreenSize={ this.state.selectedScreenSize } />
-        <Footer />
-        </StickyContainer>
+        <div>
+          <Header />
+          <StickyContainer className="container">
+            <Sticky>
+              {({ style, isSticky, distanceFromTop }) => (
+                <Filters
+                  style={ style }
+                  isSticky={ isSticky }
+                  distanceFromTop={ distanceFromTop }
+                  selectedScreenSize={ this.state.selectedScreenSize }
+                  onScreenSizeChange={ this.onScreenSizeChange } />
+              )}
+            </Sticky>
+          <LandingPages
+            selectedScreenSize={ this.state.selectedScreenSize } />
+          <Footer />
+          </StickyContainer>
+        </div>
       </Layout>
     )
   }

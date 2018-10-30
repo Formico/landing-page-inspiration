@@ -5,6 +5,7 @@
  */
 
 const path = require(`path`);
+const common = require(`./src/common/functions`);
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -105,7 +106,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       result.data.allPagesCsv.edges.forEach(({ node }) => {
         // create page according to the fetched data
-        const url = node.url.replace(/[^A-Za-z0-9]+/g, '-').replace(/-$/, '');
+        const url = functions.pageUrlify(node.url);
         createPage({
           path: `/landing-page-inspiration/${url}`, 
           component: path.resolve('./src/pages/landing-page.js'), // the template component
