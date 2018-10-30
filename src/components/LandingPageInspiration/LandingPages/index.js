@@ -71,7 +71,7 @@ const LandingPages = ({selectedScreenSize}) => (
         let imageData;
         switch(selectedScreenSize) {
           case 'mobile':
-            imageData = data.tabletImages.edges;
+            imageData = data.mobileImages.edges;
             break;
           case 'tablet':
             imageData = data.tabletImages.edges;
@@ -80,6 +80,8 @@ const LandingPages = ({selectedScreenSize}) => (
             imageData = data.desktopImages.edges;
         }
         let images = imageData.map((edge, idx) => {
+          let siteData = websiteData[edge.node.childImageSharp.fluid.originalName];
+          console.log(siteData);
           return (
             <Preview
               key={ idx }

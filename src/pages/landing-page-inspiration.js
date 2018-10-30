@@ -18,20 +18,24 @@ class LandingPageInspiration extends React.Component {
 
     this.onScreenSizeChange = this.onScreenSizeChange.bind(this);
   }
+
   onScreenSizeChange(newSize) {
     this.setState({
       selectedScreenSize: newSize
     });
   }
+
   render() {
     return (
       <Layout>
         <Header />
         <StickyContainer className="container">
           <Sticky>
-            {({ style }) => (
+            {({ style, isSticky, distanceFromTop }) => (
               <Filters
                 style={ style }
+                isSticky={ isSticky }
+                distanceFromTop={ distanceFromTop }
                 selectedScreenSize={ this.state.selectedScreenSize }
                 onScreenSizeChange={ this.onScreenSizeChange } />
             )}
