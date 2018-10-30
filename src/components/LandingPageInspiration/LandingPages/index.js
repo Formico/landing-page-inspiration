@@ -63,7 +63,6 @@ const LandingPages = ({selectedScreenSize}) => (
     `}
     render={
       data => {
-        console.log(data);
         let websiteData = {};
         data.allPagesCsv.edges.forEach(edge => {
           websiteData[edge.node.filename] = {
