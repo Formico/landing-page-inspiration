@@ -13,31 +13,28 @@
 		display: block;
 		min-width: 128px;
 		font-family: $font-body;
-		border: 2px solid rgba(0, 0, 0, .5);
-		border-top: 2px solid rgba(255, 255, 255, 0);
+		border: 2px solid $eggplant;
+		border-top: 2px solid $light-grey;
 		border-radius: 0 0 6px 6px;
 		padding: 6px 12px;
 		margin: -2px;
-		background: rgba(255, 255, 255, 0.8);
+		background: $light-grey;
 		text-align: center;
 
 		height: auto;
 
 		&.hide {
-			height: 0;
-			padding: 0;
-			border: none;
-			overflow: hidden;
+			opacity: 0;
 		}
 	}
 
 	.filters-container {
-		background: rgba(255, 255, 255, 0.8);
+		background: $light-grey;
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		border-bottom: 2px solid rgba(0, 0, 0, .5);
+		border-bottom: 2px solid $eggplant;
 		overflow: hidden;
 
 		@include transition(margin-top .5s);

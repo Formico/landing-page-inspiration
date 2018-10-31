@@ -61,7 +61,7 @@ class Filters extends React.Component {
         </div>
         <div className={`toggle-filters
                         ${showFilters ? 'engaged' : ''}
-                        ${isSticky && -distanceFromTop > 150 ? '' : 'hide'}`}
+                        ${isSticky ? '' : 'hide'}`}
              onClick={ this.toggleFilters }>
           { `${showFilters ? "Hide Filters" : "Show Filters"}` }
         </div>
