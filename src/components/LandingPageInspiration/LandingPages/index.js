@@ -10,7 +10,8 @@ import './index.scss'
 
 const LandingPages = ({
   selectedCategories,
-  selectedScreenSize
+  selectedScreenSize,
+  previewSize
 }) => (
   <StaticQuery
     query={graphql`
@@ -105,13 +106,13 @@ const LandingPages = ({
           return (
             <Preview
               key={ idx }
+              width={ previewSize }
               visible={ returnResult }
               title={ siteData.title }
               img={ edge.node.childImageSharp.fluid }
               url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />
             )
         });
-        console.log(images.length);
         return (
           <div className="lpi-landing-pages">
             { images }

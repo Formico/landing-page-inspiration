@@ -32,8 +32,10 @@ class Filters extends React.Component {
       distanceFromTop,
       selectedCategories,
       selectedScreenSize,
+      previewSize,
       toggleCategory,
-      onScreenSizeChange
+      onScreenSizeChange,
+      adjustPreviewSize
     } = this.props;
 
     const { showFilters } = this.state;
@@ -105,6 +107,15 @@ class Filters extends React.Component {
           <FilterWidget
             selectorData={ categoryFilterData }
             title="Categories" />
+          <div className="preview-size-slider">
+            <h4>Adjust Preview Size</h4>
+            <input
+              type="range"
+              min="10"
+              max="100"
+              value={ previewSize }
+              onChange={ adjustPreviewSize } />
+          </div>
         </div>
         <div className={`toggle-filters
                         ${showFilters ? 'engaged' : ''}

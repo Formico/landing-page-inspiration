@@ -20,11 +20,13 @@ class LandingPageInspiration extends React.Component {
 
     this.state = {
       selectedScreenSize: 'desktop',
-      selectedCategories: new Set()
+      selectedCategories: new Set(),
+      previewSize:        25,
     }
 
     this.onScreenSizeChange = this.onScreenSizeChange.bind(this);
     this.toggleCategory     = this.toggleCategory.bind(this);
+    this.adjustPreviewSize  = this.adjustPreviewSize.bind(this);
   }
 
   onScreenSizeChange(newSize) {
@@ -39,10 +41,17 @@ class LandingPageInspiration extends React.Component {
     }));
   }
 
+  adjustPreviewSize(event) {
+    this.setState({
+      previewSize: event.target.value
+    });
+  }
+
   render() {
     const {
       selectedScreenSize,
-      selectedCategories
+      selectedCategories,
+      previewSize
     } = this.state;
 
     return (
@@ -60,14 +69,17 @@ class LandingPageInspiration extends React.Component {
                   distanceFromTop={ distanceFromTop }
                   selectedCategories={ selectedCategories }
                   selectedScreenSize={ selectedScreenSize }
+                  previewSize={ previewSize }
                   toggleCategory={ this.toggleCategory }
-                  onScreenSizeChange={ this.onScreenSizeChange } />
+                  onScreenSizeChange={ this.onScreenSizeChange }
+                  adjustPreviewSize={ this.adjustPreviewSize } />
               )}
             </Sticky>
             <Copy />
             <LandingPages
               selectedCategories={ selectedCategories }
-              selectedScreenSize={ selectedScreenSize } />
+              selectedScreenSize={ selectedScreenSize }
+              previewSize={ previewSize } />
             <Footer />
           </StickyContainer>
         </div>
