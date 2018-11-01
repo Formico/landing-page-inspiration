@@ -2,4 +2,7 @@
 
 .lpi-preview {
 	overflow: scroll;
+	&.hide {
+		display: none;
+	}
 }

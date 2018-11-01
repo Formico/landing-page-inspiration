@@ -8,7 +8,10 @@ import Preview from './Preview';
 
 import './index.scss'
 
-const LandingPages = ({selectedScreenSize}) => (
+const LandingPages = ({
+  selectedCategories,
+  selectedScreenSize
+}) => (
   <StaticQuery
     query={graphql`
       query {
@@ -84,10 +87,22 @@ const LandingPages = ({selectedScreenSize}) => (
         let images = imageData.map((edge, idx) => {
           let originalName = edge.node.childImageSharp.fluid.originalName;
           let siteData = websiteData[originalName];
+          let returnResult = false;
+
+          if (!selectedCategories || selectedCategories.size < 1) {
+            returnResult = true;
+          } else {
+            siteData.categories.split(', ').forEach((category) => {
+              if (selectedCategories.has(category)) {
+                returnResult = true;
+              }
+            });
+          }
 
           return (
             <Preview
               key={ idx }
+              visible={ returnResult }
               title={ siteData.title }
               img={ edge.node.childImageSharp.fluid }
               url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />

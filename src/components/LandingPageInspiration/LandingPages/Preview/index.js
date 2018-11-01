@@ -4,8 +4,13 @@ import Link from 'gatsby-link'
 
 import './index.scss'
 
-const Preview = ({ title, img, url }) => (
-  <div className="lpi-preview">
+const Preview = ({
+  title,
+  img,
+  url,
+  visible
+}) => (
+  <div className={ `lpi-preview ${visible ? '' : 'hide'}` }>
     <Link to={ url }>
       <Img fluid={ img } />
       <p>{ title }</p>
