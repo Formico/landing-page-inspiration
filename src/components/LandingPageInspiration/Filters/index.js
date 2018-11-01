@@ -46,19 +46,19 @@ class Filters extends React.Component {
     const screenSizeFilterData = [
       {
         isSelected: selectedScreenSize === 'mobile',
-        alt: "mobile",
+        alt: "Mobile",
         src: `${routes.ICON}/mobile.svg`,
         onClick: () => onScreenSizeChange('mobile')
       },
       {
         isSelected: selectedScreenSize === 'tablet',
-        alt: "tablet",
+        alt: "Tablet",
         src: `${routes.ICON}/tablet.svg`,
         onClick: () => onScreenSizeChange('tablet')
       },
       {
         isSelected: selectedScreenSize === 'desktop',
-        alt: "desktop",
+        alt: "Desktop",
         src: `${routes.ICON}/laptop.svg`,
         onClick: () => onScreenSizeChange('desktop')
       }
@@ -68,19 +68,19 @@ class Filters extends React.Component {
       {
         isSelected: selectedCategories.has(E_COMMERCE),
         alt: E_COMMERCE,
-        src: `${routes.ICON}/mobile.svg`,
+        src: `${routes.ICON}/cart.svg`,
         onClick: () => toggleCategory(E_COMMERCE)
       },
       {
         isSelected: selectedCategories.has(HEALTHCARE),
         alt: HEALTHCARE,
-        src: `${routes.ICON}/tablet.svg`,
+        src: `${routes.ICON}/health.svg`,
         onClick: () => toggleCategory(HEALTHCARE)
       },
       {
         isSelected: selectedCategories.has(FINANCE),
         alt: FINANCE,
-        src: `${routes.ICON}/laptop.svg`,
+        src: `${routes.ICON}/dollar.svg`,
         onClick: () => toggleCategory(FINANCE)
       }
     ];

@@ -10,6 +10,7 @@ class FilterWidget extends React.Component {
        <img
         key={ idx }
         className={ selector.isSelected ? 'selected' : '' }
+        title={ selector.alt } 
         alt={ selector.alt } 
         src={ selector.src }
         onClick={ () => selector.onClick() } />     
