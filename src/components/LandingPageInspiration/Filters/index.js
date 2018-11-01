@@ -40,7 +40,8 @@ class Filters extends React.Component {
     const {
       E_COMMERCE,
       HEALTHCARE,
-      FINANCE
+      FINANCE,
+      VIDEO_GAMES
     } = categories;
 
     const screenSizeFilterData = [
@@ -82,6 +83,12 @@ class Filters extends React.Component {
         alt: FINANCE,
         src: `${routes.ICON}/dollar.svg`,
         onClick: () => toggleCategory(FINANCE)
+      },
+      {
+        isSelected: selectedCategories.has(VIDEO_GAMES),
+        alt: VIDEO_GAMES,
+        src: `${routes.ICON}/controller.svg`,
+        onClick: () => toggleCategory(VIDEO_GAMES)
       }
     ];
 

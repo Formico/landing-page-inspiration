@@ -74,6 +74,7 @@ const LandingPages = ({
         });
 
         let imageData;
+        let numResults = 0;
         switch(selectedScreenSize) {
           case 'mobile':
             imageData = data.mobileImages.edges;
@@ -91,10 +92,12 @@ const LandingPages = ({
 
           if (!selectedCategories || selectedCategories.size < 1) {
             returnResult = true;
+            numResults += 1;
           } else {
             siteData.categories.split(', ').forEach((category) => {
               if (selectedCategories.has(category)) {
                 returnResult = true;
+                numResults += 1;
               }
             });
           }
@@ -108,9 +111,11 @@ const LandingPages = ({
               url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />
             )
         });
+        console.log(images.length);
         return (
           <div className="lpi-landing-pages">
             { images }
+            { numResults > 0 ? '' : <p className="no-results">No Results</p> }
           </div>
         );
       }
