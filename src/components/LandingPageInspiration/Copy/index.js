@@ -7,8 +7,8 @@ import './index.scss'
 const Copy = () => (
   <div className="lpi-copy">
     <h1>Landing Page Inspiration</h1>
-    <p>{`Learn from the best, so you don't look like all the rest.`}</p>
-    <CTA text="Submit A Website" link="#" />
+    <p>{`Learn from the best, so you don't look like the rest.`}</p>
+    <CTA text="Submit A Website" link="https://formico.typeform.com/to/RhOpHk" />
   </div>
 )
 
