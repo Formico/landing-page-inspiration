@@ -1,6 +1,9 @@
 import React from 'react'
 
 import routes from '../../../constants/routes.js';
+import categories from '../../../constants/lpi-categories.js';
+
+import FilterWidget from './FilterWidget';
 
 import './index.scss'
 
@@ -27,37 +30,74 @@ class Filters extends React.Component {
       style,
       isSticky,
       distanceFromTop,
+      selectedCategories,
       selectedScreenSize,
+      toggleCategory,
       onScreenSizeChange
     } = this.props;
 
     const { showFilters } = this.state;
+    const {
+      E_COMMERCE,
+      HEALTHCARE,
+      FINANCE
+    } = categories;
+
+    const screenSizeFilterData = [
+      {
+        isSelected: selectedScreenSize === 'mobile',
+        alt: "mobile",
+        src: `${routes.ICON}/mobile.svg`,
+        onClick: () => onScreenSizeChange('mobile')
+      },
+      {
+        isSelected: selectedScreenSize === 'tablet',
+        alt: "tablet",
+        src: `${routes.ICON}/tablet.svg`,
+        onClick: () => onScreenSizeChange('tablet')
+      },
+      {
+        isSelected: selectedScreenSize === 'desktop',
+        alt: "desktop",
+        src: `${routes.ICON}/laptop.svg`,
+        onClick: () => onScreenSizeChange('desktop')
+      }
+    ];
+
+    const categoryFilterData = [
+      {
+        isSelected: selectedCategories.has(E_COMMERCE),
+        alt: E_COMMERCE,
+        src: `${routes.ICON}/mobile.svg`,
+        onClick: () => toggleCategory(E_COMMERCE)
+      },
+      {
+        isSelected: selectedCategories.has(HEALTHCARE),
+        alt: HEALTHCARE,
+        src: `${routes.ICON}/tablet.svg`,
+        onClick: () => toggleCategory(HEALTHCARE)
+      },
+      {
+        isSelected: selectedCategories.has(FINANCE),
+        alt: FINANCE,
+        src: `${routes.ICON}/laptop.svg`,
+        onClick: () => toggleCategory(FINANCE)
+      }
+    ];
+
 
     return (
       <div className="lpi-filters" style={ style }>
-        <div
-          className={ `filters-container ${!isSticky || showFilters || -distanceFromTop < 150 ? 'show' : ''}` }>  
-          <div
-            className="screen-size-selection">
-            <h4>Screen Size</h4>
-            <div className="selectors">
-              <img
-                className={ selectedScreenSize === 'mobile' ?  'selected' : '' }
-                alt="mobile"
-                src={ `${routes.ICON}/mobile.svg` }
-                onClick={ () => onScreenSizeChange('mobile') } />
-              <img
-                className={ selectedScreenSize === 'tablet' ?  'selected' : '' }
-                alt="tablet"
-                src={ `${routes.ICON}/tablet.svg` }
-                onClick={ () => onScreenSizeChange('tablet') } />
-              <img
-                className={ selectedScreenSize === 'desktop' ?  'selected' : '' }
-                alt="desktop"
-                src={ `${routes.ICON}/laptop.svg` }
-                onClick={ () => onScreenSizeChange('desktop') } />
-            </div>
-          </div>
+        <div className={
+          `filters-container
+           ${!isSticky || showFilters || -distanceFromTop < 150 ? 'show' : ''}`
+        }>  
+          <FilterWidget
+            selectorData={ screenSizeFilterData }
+            title="Screen Size" />
+          <FilterWidget
+            selectorData={ categoryFilterData }
+            title="Categories" />
         </div>
         <div className={`toggle-filters
                         ${showFilters ? 'engaged' : ''}

@@ -106,7 +106,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       result.data.allPagesCsv.edges.forEach(({ node }) => {
         // create page according to the fetched data
-        const url = functions.pageUrlify(node.url);
+        const url = common.pageUrlify(node.url);
         createPage({
           path: `/landing-page-inspiration/${url}`, 
           component: path.resolve('./src/pages/landing-page.js'), // the template component

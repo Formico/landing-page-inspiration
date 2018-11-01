@@ -19,10 +19,12 @@ class LandingPageInspiration extends React.Component {
     super();
 
     this.state = {
-      selectedScreenSize: 'desktop'
+      selectedScreenSize: 'desktop',
+      selectedCategories: new Set()
     }
 
     this.onScreenSizeChange = this.onScreenSizeChange.bind(this);
+    this.toggleCategory     = this.toggleCategory.bind(this);
   }
 
   onScreenSizeChange(newSize) {
@@ -31,7 +33,18 @@ class LandingPageInspiration extends React.Component {
     });
   }
 
+  toggleCategory(category) {
+    this.setState(({ selectedCategories: c }) => ({
+      categories: c.has(category) ? c.delete(category) : c.add(category)
+    }));
+  }
+
   render() {
+    const {
+      selectedScreenSize,
+      selectedCategories
+    } = this.state;
+
     return (
       <Layout>
         <div style={{ overflow: 'hidden', position: 'relative', background: '#141433' }}>
@@ -45,13 +58,16 @@ class LandingPageInspiration extends React.Component {
                   style={ style }
                   isSticky={ isSticky }
                   distanceFromTop={ distanceFromTop }
-                  selectedScreenSize={ this.state.selectedScreenSize }
+                  selectedCategories={ selectedCategories }
+                  selectedScreenSize={ selectedScreenSize }
+                  toggleCategory={ this.toggleCategory }
                   onScreenSizeChange={ this.onScreenSizeChange } />
               )}
             </Sticky>
             <Copy />
             <LandingPages
-              selectedScreenSize={ this.state.selectedScreenSize } />
+              selectedCategories={ selectedCategories }
+              selectedScreenSize={ selectedScreenSize } />
             <Footer />
           </StickyContainer>
         </div>
