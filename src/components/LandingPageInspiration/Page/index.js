@@ -9,11 +9,24 @@ const Page = ({
   categories,
   images
 }) => {
-  const mobileImage = images.mobile,
-        tabletImage = images.tablet,
-        desktopImage = images.desktop;
 
-  console.log(images);
+  let screenshots = [];
+    
+  if (images) {
+    const imageList = [images.mobile, images.tablet, images.desktop];
+
+    screenshots = imageList.map((img, idx) => (
+      <div className="screenshot">
+        <Img fluid={ img } />
+      </div>
+    ));
+  }
+
+  let categoryTags = '';
+
+  if (categories) {
+    categoryTags = categories.split(', ').map(category => ( `#${category} ` ));
+  }
 
   return (
     <div className="page">
@@ -21,19 +34,11 @@ const Page = ({
         <h2>{ title }</h2>
         <a href={ url }>{ url }</a>
         <div className="categories">
-          { categories.split(', ').map(category => ( `#${category} ` )) }
+          { categoryTags }
         </div>
       </section>
       <div className="images-container">
-        <div className="screenshot">
-          <Img fluid={ mobileImage } />
-        </div>
-        <div className="screenshot">
-          <Img fluid={ tabletImage } />
-        </div>
-        <div className="screenshot">
-          <Img fluid={ desktopImage } />
-        </div>
+        { screenshots }
       </div>
     </div>
   )
