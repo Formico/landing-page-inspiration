@@ -6,15 +6,13 @@ import './index.scss'
 
 const Preview = ({
   width,
-  title,
   img,
   url,
   visible
 }) => (
-  <div style={{ width: `${width}%` }} className={ `lpi-preview ${visible ? '' : 'hide'}` }>
+  <div style={{ width: `100%` }} className={ `lpi-preview ${visible ? '' : 'hide'}` }>
     <Link to={ url }>
       <Img fluid={ img } />
-      <p>{ title }</p>
     </Link>
   </div>
 )

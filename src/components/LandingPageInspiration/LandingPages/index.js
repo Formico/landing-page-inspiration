@@ -104,14 +104,16 @@ const LandingPages = ({
           }
 
           return (
-            <Preview
-              key={ idx }
-              width={ previewSize }
-              visible={ returnResult }
-              title={ siteData.title }
-              img={ edge.node.childImageSharp.fluid }
-              url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />
-            )
+            <div className="lpi-preview-wrapper" style={{ width: `${previewSize}%` }}>
+              <h4>{ siteData.title }</h4>
+              <Preview
+                key={ idx }
+                width={ previewSize }
+                visible={ returnResult }
+                img={ edge.node.childImageSharp.fluid }
+                url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />
+            </div>
+          )
         });
         return (
           <div className="lpi-landing-pages">
