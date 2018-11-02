@@ -6,11 +6,16 @@ export default class CTA extends Component {
   render() {
     const {
       link,
-      text
+      text,
+      type
     } = this.props;
 
     return (
-      <a className="button-cta" href={ link }>{ text }</a>
+      <a
+        className={ `button-cta ${!type || type === 'primary' ? 'primary' : 'secondary'}` }
+        href={ link }>
+          { text }
+      </a>
     );
   }
 }
