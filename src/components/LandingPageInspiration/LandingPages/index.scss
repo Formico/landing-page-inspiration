@@ -15,6 +15,10 @@
 		height: 500px;
 		margin: 48px 12px;
 
+		&.hide {
+			display: none;
+		}
+
 		h4 {
 			font-family: $font-body;
 			margin: 0;
@@ -23,6 +27,7 @@
 		.lpi-preview {
 			height: 500px;
 			margin-top: 12px;
+			overflow: scroll;
 
 			@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
 			@include transition((margin-top .25s, box-shadow .25s));

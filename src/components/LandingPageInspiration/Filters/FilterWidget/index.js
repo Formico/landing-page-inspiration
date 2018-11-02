@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactSVG from 'react-svg'
 
 import './index.scss'
 
@@ -7,13 +8,13 @@ class FilterWidget extends React.Component {
     const { selectorData, title } = this.props;
 
     const selectors = selectorData.map((selector, idx) => (
-       <img
+       <ReactSVG
         key={ idx }
-        className={ selector.isSelected ? 'selected' : '' }
+        className={ `icon ${selector.isSelected ? 'selected' : ''}` }
         title={ selector.alt } 
         alt={ selector.alt } 
-        src={ selector.src }
-        onClick={ () => selector.onClick() } />     
+        path={ selector.src }
+        onClick={ () => selector.onClick() } />
     ));
     
     return (

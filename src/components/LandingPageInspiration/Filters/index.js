@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 import routes from '../../../constants/routes.js';
 import categories from '../../../constants/lpi-categories.js';
@@ -94,36 +95,35 @@ class Filters extends React.Component {
       }
     ];
 
-
     return (
-      <div className="lpi-filters" style={ style }>
-        <div className={
-          `filters-container
-           ${!isSticky || showFilters || -distanceFromTop < 150 ? 'show' : ''}`
-        }>  
-          <FilterWidget
-            selectorData={ screenSizeFilterData }
-            title="Screen Size" />
-          <FilterWidget
-            selectorData={ categoryFilterData }
-            title="Categories" />
-          <div className="preview-size-slider">
-            <h4>Adjust Preview Size</h4>
-            <input
-              type="range"
-              min="10"
-              max="100"
-              value={ previewSize }
-              onChange={ adjustPreviewSize } />
+      <nav className="lpi-filters" style={ style }>
+        <div className={ `top-bar ${!isSticky || showFilters || -distanceFromTop < 150 ? 'show' : ''}` }>  
+          <Link to="/" className="logo-container">
+            <img alt="" className="wordmark" src="/logo/formico-wordmark.svg" />
+          </Link>
+          <div className="filters-container">
+            <FilterWidget
+              selectorData={ screenSizeFilterData }
+              title="Screen Size" />
+            <FilterWidget
+              selectorData={ categoryFilterData }
+              title="Categories" />
+            <div className="preview-size-slider">
+              <h4>Adjust Preview Size</h4>
+              <input
+                type="range"
+                min="10"
+                max="100"
+                value={ previewSize }
+                onChange={ adjustPreviewSize } />
+            </div>
           </div>
         </div>
-        <div className={`toggle-filters
-                        ${showFilters ? 'engaged' : ''}
-                        ${isSticky ? '' : 'hide'}`}
+        <div className={ `toggle-filters ${isSticky ? '' : 'hide'}` }
              onClick={ this.toggleFilters }>
           { `${showFilters ? "Hide Filters" : "Show Filters"}` }
         </div>
-      </div>
+      </nav>
     )
   }
 

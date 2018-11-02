@@ -1,10 +1,10 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Link from 'gatsby-link'
 
 import { pageUrlify, shuffleArray } from '../../../common/functions'
 import routes from '../../../constants/routes'
-
-import Preview from './Preview';
 
 import './index.scss'
 
@@ -104,14 +104,15 @@ const LandingPages = ({
           }
 
           return (
-            <div className="lpi-preview-wrapper" style={{ width: `${previewSize}%` }}>
+            <div key={ idx }
+                 className={ `lpi-preview-wrapper ${returnResult ? '' : 'hide'}` }
+                 style={{ width: `${previewSize}%` }}>
               <h4>{ siteData.title }</h4>
-              <Preview
-                key={ idx }
-                width={ previewSize }
-                visible={ returnResult }
-                img={ edge.node.childImageSharp.fluid }
-                url={ `${routes.LPI}/${pageUrlify(siteData.url)}` } />
+              <div className="lpi-preview">
+                <Link to={ `${routes.LPI}/${pageUrlify(siteData.url)}` }>
+                  <Img fluid={ edge.node.childImageSharp.fluid } />
+                </Link>
+              </div>
             </div>
           )
         });

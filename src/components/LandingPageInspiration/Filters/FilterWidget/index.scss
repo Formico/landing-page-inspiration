@@ -10,17 +10,19 @@
 
 	h4 {
 		margin: 0;
-		color: black;
 	}
 
 	.selectors {
 		display: flex;
 		flex-direction: row;
 		margin-top: 6px;
-		img {
+
+		.icon {
 			height: 24px;
 			opacity: 0.5;
 			margin: auto 6px;
+			fill: $logo-green;
+
 			&.selected {
 				opacity: 1.0;
 			}
