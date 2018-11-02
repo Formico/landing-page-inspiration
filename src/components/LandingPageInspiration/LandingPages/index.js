@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { pageUrlify } from '../../../common/functions'
+import { pageUrlify, shuffleArray } from '../../../common/functions'
 import routes from '../../../constants/routes'
 
 import Preview from './Preview';
@@ -117,7 +117,7 @@ const LandingPages = ({
         });
         return (
           <div className="lpi-landing-pages">
-            { images }
+            { shuffleArray(images) }
             { numResults > 0 ? '' : <p className="no-results">No Results</p> }
           </div>
         );

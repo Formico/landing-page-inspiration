@@ -2,6 +2,7 @@
 
 .lpi-landing-pages {
 	z-index: $layer-1;
+	position: relative;
 	display: flex;	
 	flex-direction: row;
 	flex-wrap: wrap;
