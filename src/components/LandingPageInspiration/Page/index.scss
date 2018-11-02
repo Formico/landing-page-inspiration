@@ -3,7 +3,19 @@
 .page {
 	display: flex;	
 	flex-direction: column;
-	
+	background: $light-grey;
+	font-family: $font-body;
+	.text-info {
+		text-align: center;	
+
+		h2 {
+			margin: 24px 0;
+		}
+
+		.categories {
+			margin-top: 12px;
+		}
+	}	
 	.images-container {
 		display: flex;
 		flex-direction: row;

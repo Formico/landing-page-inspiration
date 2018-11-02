@@ -9,7 +9,7 @@ import Footer from '../components/Index/Footer';
 const LandingPage = ({ pageContext }) => {
   return (
     <Layout>
-      <div className="lpi-landing-page">
+      <div className="lpi-landing-page" style={{ background: '#141433' }} >
         <Header />
         <Page
           title={ pageContext.title }

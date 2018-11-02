@@ -17,9 +17,13 @@ const Page = ({
 
   return (
     <div className="page">
-      <div>{ title }</div>
-      <a href={ url }>{ url }</a>
-      <div>{ categories }</div>
+      <section className="text-info">
+        <h2>{ title }</h2>
+        <a href={ url }>{ url }</a>
+        <div className="categories">
+          { categories.split(', ').map(category => ( `#${category} ` )) }
+        </div>
+      </section>
       <div className="images-container">
         <div className="screenshot">
           <Img fluid={ mobileImage } />
