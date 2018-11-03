@@ -1,5 +1,48 @@
 @import '../../../common/common.scss';
 
+/*
+Expected Bahaviour
+
+MOBILE
+	+ !sticky
+
+		Show logo ✓
+		Hide Filters ✓
+		Hide “Show/Hide” Tab ✓
+
+	+ sticky + !show
+
+		Hide logo ✓
+		Hide filters ✓
+		Show “Show/Hide” Tab ✓
+
+	+ sticky + show
+
+		Hide logo ✓
+		Show Filters ✓
+		Show “Show/Hide” Tab ✓
+
+
+TABLET/DESKTOP
+	+ !sticky
+
+		Show logo ✓
+		Show Filters ✓
+		Hide “Show/Hide” Tab ✓
+
+	+ sticky + !show
+
+		Show logo ✓
+		Hide filters ✓
+		Show “Show/Hide” Tab ✓
+
+	+ sticky + show
+
+		Show logo ✓
+		Show Filters ✓
+		Show “Show/Hide” Tab ✓
+*/
+
 .lpi-filters {
 	width: 100%;
 	display: flex;
