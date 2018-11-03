@@ -31,23 +31,40 @@
 
 	.top-bar {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		@include transition(margin-top .5s);
-		margin-top: -75px;
 		overflow: hidden;
 		background: $eggplant;
 		width: 100%;
 
+		@include breakpoint(sm) {
+			flex-direction: row;
+			margin-top: -73px;
+		}
+
 		&.show {
 			margin-top: 0;
+
+			.filters-container {
+				height: 100%;
+			}
 		}
 
 		.logo-container {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			margin: 0 -124px 0 24px;
 			width: 100px;
+
+			margin: 12px auto;
+
+			@include breakpoint(sm) {
+				margin: 0 -24px 0 24px;
+			}
+
+			@include breakpoint(md) {
+				margin-right: -124px;
+			}
 
 			.wordmark {
 				height: 32px;
@@ -58,10 +75,27 @@
 		.filters-container {
 			color: $logo-green;	
 			display: flex;
-			flex-direction: row;
 			align-items: center;
 			justify-content: center;
 			margin: auto;
+
+			height: 0;
+			overflow: hidden;
+
+			flex-direction: column;
+
+			@include breakpoint(sm) {
+				height: 100%;
+				flex-direction: row;
+			}
+
+			&.sticky {
+				height: 0;
+
+				@include breakpoint(sm) {
+					height: 100%;
+				}
+			}
 
 			.preview-size-slider {
 				height: 100%;

@@ -118,7 +118,7 @@ const LandingPages = ({
         });
         return (
           <div className="lpi-landing-pages">
-            { shuffleArray(images) }
+            { images }
             { numResults > 0 ? '' : <p className="no-results">No Results</p> }
           </div>
         );

@@ -97,11 +97,11 @@ class Filters extends React.Component {
 
     return (
       <nav className="lpi-filters" style={ style }>
-        <div className={ `top-bar ${!isSticky || showFilters || -distanceFromTop < 150 ? 'show' : ''}` }>  
+        <div className={ `top-bar ${!isSticky || showFilters ? 'show' : ''}` }>  
           <Link to="/" className="logo-container">
             <img alt="" className="wordmark" src="/logo/formico-wordmark.svg" />
           </Link>
-          <div className="filters-container">
+          <div className={ `filters-container ${isSticky ? '' : 'sticky'}` }>
             <FilterWidget
               selectorData={ screenSizeFilterData }
               title="Screen Size" />
