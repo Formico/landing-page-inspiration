@@ -13,11 +13,23 @@ const Page = ({
   let screenshots = [];
     
   if (images) {
-    const imageList = [images.mobile, images.tablet, images.desktop];
+    const imageList = [{ 
+        img:   images.mobile,
+        title: 'Mobile',
+      }, {
+        img:   images.tablet,
+        title: 'Tablet',
+      }, {
+        img:   images.desktop,
+        title: 'Desktop',
+      }];
 
     screenshots = imageList.map((img, idx) => (
-      <div className="screenshot">
-        <Img fluid={ img } />
+      <div key={ idx } className="preview-wrapper">
+        <h4>{ img.title }</h4>
+        <div className="preview">
+          <Img fluid={ img.img } />
+        </div>
       </div>
     ));
   }
@@ -32,7 +44,7 @@ const Page = ({
     <div className="page">
       <section className="text-info">
         <h2>{ title }</h2>
-        <a href={ url }>{ url }</a>
+        <a className="site-link" href={ url }>{ url }</a>
         <div className="categories">
           { categoryTags }
         </div>

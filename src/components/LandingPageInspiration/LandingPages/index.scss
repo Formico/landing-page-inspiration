@@ -12,7 +12,6 @@
 	min-height: 500px;
 
 	.lpi-preview-wrapper {
-		height: 500px;
 		margin: 48px 12px;
 
 		&.hide {
@@ -25,9 +24,16 @@
 		}
 		
 		.lpi-preview {
-			height: 500px;
 			margin-top: 12px;
 			overflow: scroll;
+		
+			height: 300px;
+			@include breakpoint(sm) {
+				height: 400px;
+			}
+			@include breakpoint(md) {
+				height: 500px;
+			}
 
 			@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
 			@include transition((margin-top .25s, box-shadow .25s));

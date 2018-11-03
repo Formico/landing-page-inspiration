@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 
-import { pageUrlify, shuffleArray } from '../../../common/functions'
+import { pageUrlify } from '../../../common/functions'
 import routes from '../../../constants/routes'
 
 import './index.scss'

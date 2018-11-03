@@ -9,9 +9,9 @@
 		text-align: center;	
 
 		h2 {
-			margin: 24px 0;
+			margin-top: 48px;
+			margin-bottom: 24px;
 		}
-
 		.categories {
 			margin-top: 12px;
 		}
@@ -19,16 +19,28 @@
 	.images-container {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 24px;
 
-		.screenshot {
-			width: 25%;
-			height: 750px;
-			margin: 48px 24px;
-			overflow: scroll;
+		.preview-wrapper {
+			margin: 48px 12px;
+			width: 100%;
 
-			@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
+			@include breakpoint(sm) {
+				width: 30%;
+			}
+
+			h4 {
+				margin: 0;
+				font-family: $font-body;
+			}
+			.preview {
+				height: 750px;
+				margin-top: 12px;
+				overflow: scroll;
+				@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
+			}
 		}
 	}
 }
