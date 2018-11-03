@@ -14,10 +14,34 @@ class Filters extends React.Component {
     super();
     
     this.state = {
-      showFilters: 'true'
+      showFilters: true,
+      isSticky:    false
     }
 
     this.toggleFilters = this.toggleFilters.bind(this);
+    this.handleScroll  = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    let winHeight = window.innerHeight,
+        body      = document.body,
+        html      = document.documentElement,
+        docHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight ),
+        value = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    let max = docHeight - winHeight;
+    let scrollPercent = (value / max) * 100;
+
+    this.setState({ isSticky: scrollPercent !== 0 });
   }
 
   toggleFilters() {
@@ -28,9 +52,6 @@ class Filters extends React.Component {
 
   render() {
     const {
-      style,
-      isSticky,
-      distanceFromTop,
       selectedCategories,
       selectedScreenSize,
       previewSize,
@@ -39,7 +60,8 @@ class Filters extends React.Component {
       adjustPreviewSize
     } = this.props;
 
-    const { showFilters } = this.state;
+    const { showFilters, isSticky } = this.state;
+
     const {
       E_COMMERCE,
       HEALTHCARE,
@@ -96,12 +118,12 @@ class Filters extends React.Component {
     ];
 
     return (
-      <nav className="lpi-filters" style={ style }>
-        <div className={ `top-bar ${!isSticky || showFilters ? 'show' : ''}` }>  
+      <nav className="lpi-filters">
+        <div className={ `top-bar ${isSticky ? 'sticky' : ''} ${showFilters ? 'show' : ''}` }>  
           <Link to="/" className="logo-container">
             <img alt="" className="wordmark" src="/logo/formico-wordmark.svg" />
           </Link>
-          <div className={ `filters-container ${isSticky ? '' : 'sticky'}` }>
+          <div className={ `filters-container ${isSticky ? 'sticky' : ''} ${showFilters ? 'show' : ''}` }>
             <FilterWidget
               selectorData={ screenSizeFilterData }
               title="Screen Size" />
@@ -119,7 +141,7 @@ class Filters extends React.Component {
             </div>
           </div>
         </div>
-        <div className={ `toggle-filters ${isSticky ? '' : 'hide'}` }
+        <div className={ `toggle-filters ${isSticky ? 'sticky' : ''}` }
              onClick={ this.toggleFilters }>
           { `${showFilters ? "Hide Filters" : "Show Filters"}` }
         </div>

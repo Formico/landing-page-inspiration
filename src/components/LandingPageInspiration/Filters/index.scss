@@ -6,7 +6,7 @@
 	flex-direction: column;
 	align-items: center;
 	z-index: $layer-top;
-	position: relative;
+	position: fixed;
 	min-height: 75px;
 
 	opacity: .9;
@@ -22,10 +22,10 @@
 		color: $logo-green;
 		text-align: center;
 
-		height: auto;
+		opacity: 0;
 
-		&.hide {
-			opacity: 0;
+		&.sticky {
+			opacity: 1;
 		}
 	}
 
@@ -37,16 +37,24 @@
 		background: $eggplant;
 		width: 100%;
 
+		margin-top: 0;
+
 		@include breakpoint(sm) {
 			flex-direction: row;
-			margin-top: -73px;
+			margin-top: 0px;
 		}
 
-		&.show {
-			margin-top: 0;
+		&.sticky {
+			margin-top: -52px;
 
-			.filters-container {
-				height: 100%;
+			@include breakpoint(sm) {
+				margin-top: -73px;
+			}
+		}
+
+		&.sticky.show {
+			@include breakpoint(sm) {
+				margin-top: 0;
 			}
 		}
 
@@ -68,7 +76,7 @@
 
 			.wordmark {
 				height: 32px;
-				margin: 0;
+				margin-bottom: -4px;
 			}
 		}
 
@@ -78,10 +86,9 @@
 			align-items: center;
 			justify-content: center;
 			margin: auto;
-
-			height: 0;
 			overflow: hidden;
 
+			height: 0;
 			flex-direction: column;
 
 			@include breakpoint(sm) {
@@ -89,12 +96,8 @@
 				flex-direction: row;
 			}
 
-			&.sticky {
-				height: 0;
-
-				@include breakpoint(sm) {
-					height: 100%;
-				}
+			&.sticky.show {
+				height: 100%;
 			}
 
 			.preview-size-slider {

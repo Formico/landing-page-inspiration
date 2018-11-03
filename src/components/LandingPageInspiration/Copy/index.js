@@ -6,8 +6,8 @@ import CTA from '../../Index/CTA';
 
 import './index.scss'
 
-const Copy = () => (
-  <div className="lpi-copy">
+const Copy = ({ isSticky }) => (
+  <div className={ `lpi-copy ${isSticky ? 'sticky' : ''}` }>
     <FancyBackground />
     <div className="content">
       <h1>Landing Page Inspiration</h1>

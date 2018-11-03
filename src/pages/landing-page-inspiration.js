@@ -1,5 +1,4 @@
 import React from 'react'
-import { StickyContainer, Sticky } from 'react-sticky';
 
 import Layout from '../layouts';
 
@@ -51,29 +50,19 @@ class LandingPageInspiration extends React.Component {
     return (
       <Layout>
         <div style={{ overflow: 'hidden', position: 'relative', background: '#141433' }}>
-          <div style={{ height: 1, backgroundColor: '#141433', position: 'relative', zIndex: 1 }}></div>
-          <StickyContainer style={{ position: 'relative' }} className="container">
-            <Sticky>
-              {({ style, isSticky, distanceFromTop }) => (
-                <Filters
-                  style={ style }
-                  isSticky={ isSticky }
-                  distanceFromTop={ distanceFromTop }
-                  selectedCategories={ selectedCategories }
-                  selectedScreenSize={ selectedScreenSize }
-                  previewSize={ previewSize }
-                  toggleCategory={ this.toggleCategory }
-                  onScreenSizeChange={ this.onScreenSizeChange }
-                  adjustPreviewSize={ this.adjustPreviewSize } />
-              )}
-            </Sticky>
-            <Copy />
-            <LandingPages
-              selectedCategories={ selectedCategories }
-              selectedScreenSize={ selectedScreenSize }
-              previewSize={ previewSize } />
-            <Footer />
-          </StickyContainer>
+          <Filters
+            selectedCategories={ selectedCategories }
+            selectedScreenSize={ selectedScreenSize }
+            previewSize={ previewSize }
+            toggleCategory={ this.toggleCategory }
+            onScreenSizeChange={ this.onScreenSizeChange }
+            adjustPreviewSize={ this.adjustPreviewSize } />
+          <Copy />
+          <LandingPages
+            selectedCategories={ selectedCategories }
+            selectedScreenSize={ selectedScreenSize }
+            previewSize={ previewSize } />
+          <Footer />
         </div>
       </Layout>
     )

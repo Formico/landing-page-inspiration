@@ -5,6 +5,12 @@
 	font-family: $font-body;
 	position: relative;
 
+	margin-top: 48px;
+
+	@include breakpoint(sm) {
+		margin-top: 96px;
+	}
+
 	.fancy-background {
 		z-index: $layer-0;
 	}
