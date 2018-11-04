@@ -10,6 +10,7 @@
 	background: $light-grey;
 	padding: 75px 0;
 	min-height: 500px;
+	@include transform(translate3d(0,0,0));
 
 	.lpi-preview-wrapper {
 		margin: 48px 12px;
@@ -26,6 +27,7 @@
 		.lpi-preview {
 			margin-top: 12px;
 			overflow: scroll;
+			@include transform(translate3d(0,0,0));
 		
 			height: 300px;
 			@include breakpoint(sm) {
