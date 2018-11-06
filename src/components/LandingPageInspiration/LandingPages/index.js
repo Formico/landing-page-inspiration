@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 
-import { pageUrlify } from '../../../common/functions'
+import { pageUrlify, shuffleArray } from '../../../common/functions'
 import routes from '../../../constants/routes'
 
 import './index.scss'
@@ -116,7 +116,7 @@ const LandingPages = ({
         });
         return (
           <div className="lpi-landing-pages">
-            { images }
+            { shuffleArray(images) }
             { numResults > 0 ? '' : <p className="no-results">No Results</p> }
           </div>
         );
