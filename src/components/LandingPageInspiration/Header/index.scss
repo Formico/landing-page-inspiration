@@ -28,4 +28,28 @@
 			margin-bottom: 0;
 		}
 	}
+
+	.buttons {
+		display: flex;
+		flex-direction: row;
+		margin-left: auto;
+
+		.primary {
+			display: none;
+
+			@include breakpoint(md) {
+				display: flex;
+			}
+		}
+
+		.button-cta {
+			margin-right: 12px;
+			font-size: $font-size-p;
+			height: 42px;
+
+			&:hover {
+				@include transform(none);
+			}
+		}
+	}
 }
