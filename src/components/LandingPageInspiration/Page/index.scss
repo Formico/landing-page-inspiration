@@ -5,11 +5,26 @@
 	flex-direction: column;
 	background: $light-grey;
 	font-family: $font-body;
+	.back-button {
+		margin: 24px 0 0 24px;
+		color: $eggplant;
+		&:visited {
+			color: $eggplant;
+		}
+		&:hover {
+			opacity: .8;
+		}
+	}
 	.text-info {
 		text-align: center;	
+		a {
+			&:hover {
+				opacity: .8;
+			}
+		}
 
 		h2 {
-			margin-top: 48px;
+			margin-top: 24px;
 			margin-bottom: 24px;
 		}
 		.categories {
@@ -22,6 +37,7 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 24px;
+		list-style: none;
 
 		.preview-wrapper {
 			margin: 48px 12px;
@@ -36,11 +52,16 @@
 				font-family: $font-body;
 			}
 			.preview {
-				height: 750px;
+				max-height: 1400px;
 				margin-top: 12px;
 				overflow: scroll;
 				@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
 			}
 		}
+	}
+
+	.button-cta {
+		align-self: center;
+		margin: 24px 0 52px 0;
 	}
 }

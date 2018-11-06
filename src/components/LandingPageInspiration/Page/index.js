@@ -1,5 +1,8 @@
 import React from 'react'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
+import Link from 'gatsby-link'
+
+import CTA from '../../Index/CTA';
 
 import './index.scss';
 
@@ -25,12 +28,12 @@ const Page = ({
       }];
 
     screenshots = imageList.map((img, idx) => (
-      <div key={ idx } className="preview-wrapper">
+      <li key={ idx } className="preview-wrapper">
         <h4>{ img.title }</h4>
         <div className="preview">
           <Img fluid={ img.img } />
         </div>
-      </div>
+      </li>
     ));
   }
 
@@ -42,6 +45,9 @@ const Page = ({
 
   return (
     <div className="page">
+      <Link to="/landing-page-inspiration" className="back-button">
+        { `< Back` }
+      </Link>
       <section className="text-info">
         <h2>{ title }</h2>
         <a className="site-link" href={ url }>{ url }</a>
@@ -49,9 +55,10 @@ const Page = ({
           { categoryTags }
         </div>
       </section>
-      <div className="images-container">
+      <ul className="images-container">
         { screenshots }
-      </div>
+      </ul>
+      <CTA text="Find a Developer" link="/" />
     </div>
   )
 }

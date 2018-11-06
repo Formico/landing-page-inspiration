@@ -103,7 +103,7 @@ const LandingPages = ({
           }
 
           return (
-            <div key={ idx }
+            <li key={ idx }
                  className={ `lpi-preview-wrapper ${returnResult ? '' : 'hide'}` } >
               <h4>{ siteData.title }</h4>
               <div className="lpi-preview">
@@ -111,14 +111,14 @@ const LandingPages = ({
                   <Img fluid={ edge.node.childImageSharp.fluid } />
                 </Link>
               </div>
-            </div>
+            </li>
           )
         });
         return (
-          <div className="lpi-landing-pages">
+          <ul className="lpi-landing-pages">
             { shuffleArray(images) }
             { numResults > 0 ? '' : <p className="no-results">No Results</p> }
-          </div>
+          </ul>
         );
       }
     }
