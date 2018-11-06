@@ -54,10 +54,8 @@ class Filters extends React.Component {
     const {
       selectedCategories,
       selectedScreenSize,
-      previewSize,
       toggleCategory,
       onScreenSizeChange,
-      adjustPreviewSize
     } = this.props;
 
     const { showFilters, isSticky } = this.state;
@@ -130,15 +128,6 @@ class Filters extends React.Component {
             <FilterWidget
               selectorData={ categoryFilterData }
               title="Categories" />
-            <div className="preview-size-slider">
-              <h4>Adjust Preview Size</h4>
-              <input
-                type="range"
-                min="10"
-                max="100"
-                value={ previewSize }
-                onChange={ adjustPreviewSize } />
-            </div>
           </div>
         </div>
         <div className={ `toggle-filters ${isSticky ? 'sticky' : ''}` }

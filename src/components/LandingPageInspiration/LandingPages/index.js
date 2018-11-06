@@ -11,7 +11,6 @@ import './index.scss'
 const LandingPages = ({
   selectedCategories,
   selectedScreenSize,
-  previewSize
 }) => (
   <StaticQuery
     query={graphql`
@@ -105,8 +104,7 @@ const LandingPages = ({
 
           return (
             <div key={ idx }
-                 className={ `lpi-preview-wrapper ${returnResult ? '' : 'hide'}` }
-                 style={{ width: `${previewSize}%` }}>
+                 className={ `lpi-preview-wrapper ${returnResult ? '' : 'hide'}` } >
               <h4>{ siteData.title }</h4>
               <div className="lpi-preview">
                 <Link to={ `${routes.LPI}/${pageUrlify(siteData.url)}` }>

@@ -1,19 +1,29 @@
 @import '../../../common/common.scss';
 
 .lpi-landing-pages {
-	z-index: $layer-1;
 	position: relative;
-	display: flex;	
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	z-index: $layer-1;
+
 	background: $light-grey;
-	padding: 75px 0;
-	min-height: 500px;
+
 	@include transform(translate3d(0,0,0));
+	padding: 75px 0;
+
+
+	@include column-count(2);
+	@include breakpoint(sm) {
+		padding: 75px 24px;
+	}
+	@include breakpoint(md) {
+		@include column-count(3);
+	}
+	@include breakpoint(lg) {
+		@include column-count(4);
+	}
 
 	.lpi-preview-wrapper {
-		margin: 48px 12px;
+		margin: 0px 12px 36px 12px;
+		@include break-inside(avoid);
 
 		&.hide {
 			display: none;
@@ -29,21 +39,21 @@
 			overflow: scroll;
 			@include transform(translate3d(0,0,0));
 		
-			height: 300px;
 			@include breakpoint(sm) {
-				height: 400px;
-			}
-			@include breakpoint(md) {
-				height: 500px;
+				height: auto;
 			}
 
 			@include box-shadow(-7px 12px 20px -1px rgba(0,0,0,0.36));
-			@include transition((margin-top .25s, box-shadow .25s));
+			@include transition((transform .25s, box-shadow .25s));
 
 			&:hover {
-				@include transition((margin-top 0s, box-shadow 0s));
+				@include transition((transform 0s, box-shadow 0s));
 				@include box-shadow(-12px 16px 26px -1px rgba(0,0,0,0.36));
-				margin-top: 6px;
+				@include transform(translateY(-5px));
+			}
+
+			img {
+				@include transform(translate3d(0,0,0));
 			}
 		}
 	}

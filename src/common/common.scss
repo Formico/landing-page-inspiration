@@ -86,6 +86,17 @@
   }
 }
 
+/* Layouts */
+@mixin column-count($num-cols) {
+	-webkit-column-count: $num-cols;
+	column-count: $num-cols;
+}
+
+@mixin break-inside($attr) {
+	-webkit-column-break-inside: $attr;
+	break-inside: $attr;
+}
+
 /* Shadow */
 
 @mixin box-shadow($shadow) {
