@@ -23,8 +23,18 @@
 			margin: auto 6px;
 			fill: $logo-green;
 
+			@include transition((transform .15s, opacity .15s));
+
+			&:hover {
+				@include transform(translateY(-2px));
+				opacity: .7;
+			}
+
 			&.selected {
 				opacity: 1.0;
+				&:hover {
+					opacity: 1.0;
+				}
 			}
 		}
 	}
