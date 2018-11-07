@@ -5,6 +5,7 @@ import Layout from '../layouts';
 import Copy from '../components/LandingPageInspiration/Copy';
 import Filters from '../components/LandingPageInspiration/Filters';
 import LandingPages from '../components/LandingPageInspiration/LandingPages';
+import CandyDispenser from '../components/LandingPageInspiration/CandyDispenser';
 import Footer from '../components/Index/Footer';
 
 class LandingPageInspiration extends React.Component {
@@ -50,6 +51,7 @@ class LandingPageInspiration extends React.Component {
           <LandingPages
             selectedCategories={ selectedCategories }
             selectedScreenSize={ selectedScreenSize } />
+          <CandyDispenser />
           <Footer />
         </div>
       </Layout>
