@@ -3,6 +3,7 @@
 .pricing {
 	display: flex;
 	position: relative;
+	@include transform(translate3d(0,0,0));
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;

@@ -9,6 +9,7 @@
 	height: 100%;
 	min-height: 750px;
 	position: relative;
+	@include transform(translate3d(0,0,0));
 	z-index: $layer-1;
 
 	@include clip-path(polygon(0 0, 100% $slope/8, 100% 100%, 0 100% - $slope/8));

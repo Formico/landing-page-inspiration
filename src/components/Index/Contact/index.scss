@@ -8,6 +8,7 @@
 	height: 480px;
 	color: $white;
 	position: relative;
+	@include transform(translate3d(0,0,0));
 
 	.cursor {
 		color: $white;
