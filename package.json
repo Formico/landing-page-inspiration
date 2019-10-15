@@ -1,6 +1,6 @@
 {
-  "name": "formico-website",
-  "description": "Formico Website",
+  "name": "landing-page-inspiration",
+  "description": "A website for Landing Page Inspiration",
   "version": "1.0.0",
   "author": "Anthony Castrio <anthonycastrio@gmail.com>",
   "dependencies": {
@@ -40,6 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Formico/landing-page-inspiration"
   }
 }
