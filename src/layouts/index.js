@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
       { /* Open Graph */ }
       <meta property="og:title" content="Formico | Software Development Agency" />
       <meta name="og:description" content="Formico is a software development agency that helps companies build advanced custom software solutions. We specialize in full stack web development, cloud infrastructure, and machine learning technology development." />
-      <meta property="og:url" content="https://formico.io" />
+      <meta property="og:url" content="https://formico.github.io/landing-page-inspiration/" />
       <meta property="og:image" content="/img/formicoOpenGraph.png" />
 
       { /* favicon attributes */ }
