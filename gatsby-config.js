@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Formico'
   },
+  pathPrefix: "/landing-page-inspiration",
   plugins: [
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
